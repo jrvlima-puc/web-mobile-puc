@@ -1,0 +1,4 @@
+node_modules
+client/components
+server/public/*
+mongo-data/*

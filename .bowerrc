@@ -1,0 +1,11 @@
+{
+  "directory": "client/components/",
+  "analytics": true,
+  "color": true,
+  "timeout": 120000,
+  "registry": {
+    "search": [
+      "https://bower.herokuapp.com"
+    ]
+  }
+}

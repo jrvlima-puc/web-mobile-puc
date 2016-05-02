@@ -1,0 +1,17 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "noarg": true,
+  "noempty": true,
+  "unused": false,
+  "evil": true,
+  "browser": true,
+  "devel": true,
+  "jasmine": true,
+  "globals": {
+    "module": false,
+    "require": false,
+    "define": false
+  }
+}
