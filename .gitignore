@@ -2,3 +2,6 @@ node_modules
 client/components
 server/public/*
 mongo-data/*
+.idea
+*.iml
+.sass-cache
