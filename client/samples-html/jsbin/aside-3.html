@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/xiqoxu/9 -->
+<html lang="en">
+
+<head>
+    <meta name="description" content="W3C - Exemplo 3 - Aside">
+    <meta charset="utf-8">
+    <title>W3C - Exemplo 3 - Aside</title>
+</head>
+
+<body>
+    <header>
+      <h1>W3C - Exemplo 3 - Aside</h1>
+        <h2>My wonderful blog</h2>
+        <p>My tagline</p>
+    </header>
+    <aside>
+        <!-- this aside contains two sections that are tangentially related
+  to the page, namely, links to other blogs, and links to blog posts
+  from this blog -->
+        <nav>
+            <h2>My blogroll</h2>
+            <ul>
+              <li><a href="http://blog.example.com/">Example Blog</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h2>Archives</h2>
+            <ol reversed>
+              <li><a href="/last-post">My last post</a></li>
+              <li><a href="/first-post">My first post</a></li>
+            </ol>
+        </nav>
+    </aside>
+    <aside>
+        <!-- this aside is tangentially related to the page also, it
+  contains twitter messages from the blog author -->
+        <h2>Twitter Feed</h2>
+        <blockquote cite="http://twitter.example.net/t31351234">
+            I'm on vacation, writing my blog.
+        </blockquote>
+        <blockquote cite="http://twitter.example.net/t31219752">
+            I'm going to go on vacation soon.
+        </blockquote>
+    </aside>
+    <article>
+        <!-- this is a blog post -->
+        <h2>My last post</h2>
+        <p>This is my last post.</p>
+        <footer>
+          <p><a href="/last-post" rel="bookmark">Permalink</a></p>
+        </footer>
+    </article>
+    <article>
+        <!-- this is also a blog post -->
+        <h2>My first post</h2>
+        <p>This is my first post.</p>
+        <aside>
+            <!-- this aside is about the blog post, since it's inside the
+   <article> element; it would be wrong, for instance, to put the
+   blogroll here, since the blogroll isn't really related to this post
+   specifically, only to the page as a whole -->
+            <h2>Posting</h2>
+            <p>While I'm thinking about it, I wanted to say something about posting. Posting is fun!</p>
+        </aside>
+        <footer>
+          <p><a href="/first-post" rel="bookmark">Permalink</a></p>
+        </footer>
+    </article>
+    <footer>
+        <nav>
+            <a href="/archives">Archives</a> —
+            <a href="/about">About me</a> —
+            <a href="/copyright">Copyright</a>
+        </nav>
+    </footer>
+
+
+</body>
+<!-- The following extract shows how aside can be used for blogrolls and other side content on a blog: -->
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/papica/2 -->
+<html>
+<head>
+<meta name="description" content="Object Literals - 2">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var myModule = {
+ 
+  myProperty: "someValue",
+ 
+  // object literals can contain properties and methods.
+  // e.g we can define a further object for module configuration:
+  myConfig: {
+    useCaching: true,
+    language: "en"
+  },
+ 
+  // a very basic method
+  saySomething: function () {
+    console.log( "Where in the world is Paul Irish today?" );
+  },
+ 
+  // output a value based on the current configuration
+  reportMyConfig: function () {
+    console.log( "Caching is: " + ( this.myConfig.useCaching ? "enabled" : "disabled") );
+  },
+ 
+  // override the current configuration
+  updateMyConfig: function( newConfig ) {
+ 
+    if ( typeof newConfig === "object" ) {
+      this.myConfig = newConfig;
+      console.log( this.myConfig.language );
+    }
+  }
+};
+ 
+// Outputs: Where in the world is Paul Irish today?
+myModule.saySomething();
+ 
+// Outputs: Caching is: enabled
+myModule.reportMyConfig();
+ 
+// Outputs: fr
+myModule.updateMyConfig({
+  language: "fr",
+  useCaching: false
+});
+ 
+// Outputs: Caching is: disabled
+myModule.reportMyConfig();
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">var myModule = {
+ 
+  myProperty: "someValue",
+ 
+  // object literals can contain properties and methods.
+  // e.g we can define a further object for module configuration:
+  myConfig: {
+    useCaching: true,
+    language: "en"
+  },
+ 
+  // a very basic method
+  saySomething: function () {
+    console.log( "Where in the world is Paul Irish today?" );
+  },
+ 
+  // output a value based on the current configuration
+  reportMyConfig: function () {
+    console.log( "Caching is: " + ( this.myConfig.useCaching ? "enabled" : "disabled") );
+  },
+ 
+  // override the current configuration
+  updateMyConfig: function( newConfig ) {
+ 
+    if ( typeof newConfig === "object" ) {
+      this.myConfig = newConfig;
+      console.log( this.myConfig.language );
+    }
+  }
+};
+ 
+// Outputs: Where in the world is Paul Irish today?
+myModule.saySomething();
+ 
+// Outputs: Caching is: enabled
+myModule.reportMyConfig();
+ 
+// Outputs: fr
+myModule.updateMyConfig({
+  language: "fr",
+  useCaching: false
+});
+ 
+// Outputs: Caching is: disabled
+myModule.reportMyConfig();</script></body>
+</html>

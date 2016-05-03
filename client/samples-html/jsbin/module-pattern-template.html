@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/meneca/1 -->
+<html>
+<head>
+<meta name="description" content="Module Pattern Template">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var myNamespace = (function () {
+ 
+  var myPrivateVar, myPrivateMethod;
+ 
+  // A private counter variable
+  myPrivateVar = 0;
+ 
+  // A private function which logs any arguments
+  myPrivateMethod = function( foo ) {
+      console.log( foo );
+  };
+ 
+  return {
+ 
+    // A public variable
+    myPublicVar: "foo",
+ 
+    // A public function utilizing privates
+    myPublicFunction: function( bar ) {
+ 
+      // Increment our private counter
+      myPrivateVar++;
+ 
+      // Call our private method using bar
+      myPrivateMethod( bar );
+ 
+    }
+  };
+ 
+})();
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">var myNamespace = (function () {
+ 
+  var myPrivateVar, myPrivateMethod;
+ 
+  // A private counter variable
+  myPrivateVar = 0;
+ 
+  // A private function which logs any arguments
+  myPrivateMethod = function( foo ) {
+      console.log( foo );
+  };
+ 
+  return {
+ 
+    // A public variable
+    myPublicVar: "foo",
+ 
+    // A public function utilizing privates
+    myPublicFunction: function( bar ) {
+ 
+      // Increment our private counter
+      myPrivateVar++;
+ 
+      // Call our private method using bar
+      myPrivateMethod( bar );
+ 
+    }
+  };
+ 
+})();</script></body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/nuneha/2 -->
+<html>
+<head>
+<meta name="description" content="Basic Constructors">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function Car( model, year, miles ) {
+ 
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+ 
+  this.toString = function () {
+    return this.model + " has done " + this.miles + " miles";
+  };
+}
+ 
+// Usage:
+ 
+// We can create new instances of the car
+var civic = new Car( "Honda Civic", 2009, 20000 );
+var mondeo = new Car( "Ford Mondeo", 2010, 5000 );
+ 
+// and then open our browser console to view the
+// output of the toString() method being called on
+// these objects
+console.log( civic.toString() );
+console.log( mondeo.toString() );
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">function Car( model, year, miles ) {
+ 
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+ 
+  this.toString = function () {
+    return this.model + " has done " + this.miles + " miles";
+  };
+}
+ 
+// Usage:
+ 
+// We can create new instances of the car
+var civic = new Car( "Honda Civic", 2009, 20000 );
+var mondeo = new Car( "Ford Mondeo", 2010, 5000 );
+ 
+// and then open our browser console to view the
+// output of the toString() method being called on
+// these objects
+console.log( civic.toString() );
+console.log( mondeo.toString() );</script></body>
+</html>

@@ -514,6 +514,10 @@
 		}
 	}
 
+	ul.list-html-elements {
+		list-style: none;
+	}
+
 	ul {
 		list-style: disc;
 		margin: 0 0 _size(element-margin) 0;

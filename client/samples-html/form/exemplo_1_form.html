@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="W3C - Exemplos - form">
+    <title>W3C - Exemplos - form</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <h2>Writing a form's user interface</h2>
+    <h3>Exemplo 1</h3>
+    <p>This section is non-normative.</p>
+    <p>For the purposes of this brief introduction, we will create a pizza ordering form.</p>
+    <p>Any form starts with a form element, inside which are placed the controls. Most controls are represented by the input element, which by default provides a one-line text field. To label a control, the label element is used; the label text and the control itself go inside the label element. Each part of a form is considered a paragraph, and is typically separated from other parts using p elements. Putting this together, here is how one might ask for the customer's name:</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+    </form>
+    <h3>Exemplo 2</h3>
+    <p>To let the user select the size of the pizza, we can use a set of radio buttons. Radio buttons also use the input element, this time with a type attribute with the value radio. To make the radio buttons work as a group, they are given a common name using the name attribute. To group a batch of controls together, such as, in this case, the radio buttons, one can use the fieldset element. The title of such a group of controls is given by the first element in the fieldset, which has to be a legend element.</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+    </form>
+    <h3>Exemplo 3</h3>
+    <p>To pick toppings, we can use checkboxes. These use the input element with a type attribute with the value checkbox:</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Mushroom </label>
+            </p>
+        </fieldset>
+    </form>
+    <h3>Exemplo 4</h3>
+    <p>The pizzeria for which this form is being written is always making mistakes, so it needs a way to contact the customer. For this purpose, we can use form controls specifically for telephone numbers (input elements with their type attribute set to tel) and e-mail addresses (input elements with their type attribute set to email):</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel>
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Mushroom </label>
+            </p>
+        </fieldset>
+    </form>
+    <h3>Exemplo 5</h3>
+    <p>We can use an input element with its type attribute set to time to ask for a delivery time. Many of these form controls have attributes to control exactly what values can be specified; in this case, three attributes of particular interest are min, max, and step. These set the minimum time, the maximum time, and the interval between allowed values (in seconds). This pizzeria only delivers between 11am and 9pm, and doesn't promise anything better than 15 minute increments, which we can mark up as follows:</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel>
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900">
+            </label>
+        </p>
+    </form>
+    <h3>Exemplo 6</h3>
+    <p>The textarea element can be used to provide a free-form text field. In this instance, we are going to use it to provide a space for the customer to give delivery instructions:</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel>
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900">
+            </label>
+        </p>
+        <p>
+            <label>Delivery instructions:
+                <textarea></textarea>
+            </label>
+        </p>
+    </form>
+    <h3>Exemplo 7</h3>
+    <p>Finally, to make the form submittable we use the button element:</p>
+    <form>
+        <p>
+            <label>Customer name:
+                <input>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel>
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email>
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900">
+            </label>
+        </p>
+        <p>
+            <label>Delivery instructions:
+                <textarea></textarea>
+            </label>
+        </p>
+        <p>
+            <button>Submit order</button>
+        </p>
+    </form>
+    <h2>Configuring a form to communicate with a server</h2>
+    <p>This section is non-normative.</p>
+    <p>Form submissions are exposed to servers in a variety of ways, most commonly as HTTP GET or POST requests. To specify the exact method used, the method attribute is specified on the form element. This doesn't specify how the form data is encoded, though; to specify that, you use the enctype attribute. You also have to specify the URL of the service that will handle the submitted data, using the action attribute.</p>
+    <p>For each form control you want submitted, you then have to give a name that will be used to refer to the data in the submission. We already specified the name for the group of radio buttons; the same attribute (name) also specifies the submission name. Radio buttons can be distinguished from each other in the submission by giving them different values, using the value attribute.</p>
+    <p>Multiple controls can have the same name; for example, here we give all the checkboxes the same name, and the server distinguishes which checkbox was checked by seeing which values are submitted with that name — like the radio buttons, they are also given unique values with the value attribute.</p>
+    <p>Given the settings in the previous section, this all becomes:</p>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="https://pizza.example.com/order.cgi">
+        <p>
+            <label>Customer name:
+                <input name="custname">
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel name="custtel">
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email name="custemail">
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size value="small"> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size value="medium"> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size value="large"> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="bacon"> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="cheese"> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="onion"> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="mushroom"> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900" name="delivery">
+            </label>
+        </p>
+        <p>
+            <label>Delivery instructions:
+                <textarea name="comments"></textarea>
+            </label>
+        </p>
+        <p>
+            <button>Submit order</button>
+        </p>
+    </form>
+    <h2>Client-side form validation</h2>
+    <p>This section is non-normative.</p>
+    <p>Forms can be annotated in such a way that the user agent will check the user's input before the form is submitted. The server still has to verify the input is valid (since hostile users can easily bypass the form validation), but it allows the user to avoid the wait incurred by having the server be the sole checker of the user's input.</p>
+    <h3>Exemplo 1</h3>
+    <p>The simplest annotation is the required attribute, which can be specified on input elements to indicate that the form is not to be submitted until a value is given. By adding this attribute to the customer name, pizza size, and delivery time fields, we allow the user agent to notify the user when the user submits the form without filling in those fields:</p>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="https://pizza.example.com/order.cgi">
+        <p>
+            <label>Customer name:
+                <input name="custname" required>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel name="custtel">
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email name="custemail">
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size required value="small"> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size required value="medium"> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size required value="large"> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="bacon"> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="cheese"> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="onion"> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="mushroom"> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900" name="delivery" required>
+            </label>
+        </p>
+        <p>
+            <label>Delivery instructions:
+                <textarea name="comments"></textarea>
+            </label>
+        </p>
+        <p>
+            <button>Submit order</button>
+        </p>
+    </form>
+    <h3>Exemplo 2</h3>
+    <p>It is also possible to limit the length of the input, using the maxlength attribute. By adding this to the textarea element, we can limit users to 1000 characters, preventing them from writing huge essays to the busy delivery drivers instead of staying focused and to the point:</p>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="https://pizza.example.com/order.cgi">
+        <p>
+            <label>Customer name:
+                <input name="custname" required>
+            </label>
+        </p>
+        <p>
+            <label>Telephone:
+                <input type=tel name="custtel">
+            </label>
+        </p>
+        <p>
+            <label>E-mail address:
+                <input type=email name="custemail">
+            </label>
+        </p>
+        <fieldset>
+            <legend> Pizza Size </legend>
+            <p>
+                <label>
+                    <input type=radio name=size required value="small"> Small </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size required value="medium"> Medium </label>
+            </p>
+            <p>
+                <label>
+                    <input type=radio name=size required value="large"> Large </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend> Pizza Toppings </legend>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="bacon"> Bacon </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="cheese"> Extra Cheese </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="onion"> Onion </label>
+            </p>
+            <p>
+                <label>
+                    <input type=checkbox name="topping" value="mushroom"> Mushroom </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Preferred delivery time:
+                <input type=time min="11:00" max="21:00" step="900" name="delivery" required>
+            </label>
+        </p>
+        <p>
+            <label>Delivery instructions:
+                <textarea name="comments" maxlength=1000></textarea>
+            </label>
+        </p>
+        <p>
+            <button>Submit order</button>
+        </p>
+    </form>
+</body>
+
+</html>

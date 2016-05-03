@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/gerohu/1 -->
+<html>
+<head>
+<meta name="description" content="The Revealing Module Pattern">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var myRevealingModule = (function () {
+ 
+        var privateVar = "Ben Cherry",
+            publicVar = "Hey there!";
+ 
+        function privateFunction() {
+            console.log( "Name:" + privateVar );
+        }
+ 
+        function publicSetName( strName ) {
+            privateVar = strName;
+        }
+ 
+        function publicGetName() {
+            privateFunction();
+        }
+ 
+ 
+        // Reveal public pointers to
+        // private functions and properties
+ 
+        return {
+            setName: publicSetName,
+            greeting: publicVar,
+            getName: publicGetName
+        };
+ 
+    })();
+ 
+myRevealingModule.setName( "Paul Kinlan" );
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">var myRevealingModule = (function () {
+ 
+        var privateVar = "Ben Cherry",
+            publicVar = "Hey there!";
+ 
+        function privateFunction() {
+            console.log( "Name:" + privateVar );
+        }
+ 
+        function publicSetName( strName ) {
+            privateVar = strName;
+        }
+ 
+        function publicGetName() {
+            privateFunction();
+        }
+ 
+ 
+        // Reveal public pointers to
+        // private functions and properties
+ 
+        return {
+            setName: publicSetName,
+            greeting: publicVar,
+            getName: publicGetName
+        };
+ 
+    })();
+ 
+myRevealingModule.setName( "Paul Kinlan" );</script></body>
+</html>

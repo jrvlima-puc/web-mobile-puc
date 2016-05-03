@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tables</title>
+</head>
+
+<body>
+    <h1>Tables</h1>
+    <section>
+        <h2>General Table</h2>
+        <h3>Here is an example of a table being used to mark up a Sudoku puzzle. Observe the lack of headers, which are not necessary in such a table.</h3>
+        <section>
+            <style>
+            table {
+                border-collapse: collapse;
+                border: solid thick;
+            }
+            
+            colgroup,
+            tbody {
+                border: solid medium;
+            }
+            
+            td {
+                border: solid thin;
+                height: 1.4em;
+                width: 1.4em;
+                text-align: center;
+                padding: 0;
+            }
+            </style>
+            <h1>Today's Sudoku</h1>
+            <table>
+                <colgroup>
+                    <col>
+                        <col>
+                            <col>
+                </colgroup>
+                <colgroup>
+                    <col>
+                        <col>
+                            <col>
+                </colgroup>
+                <colgroup>
+                    <col>
+                        <col>
+                            <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> </td>
+                        <td> 3 </td>
+                        <td> 6 </td>
+                        <td> </td>
+                        <td> 4 </td>
+                        <td> 7 </td>
+                        <td> </td>
+                        <td> 9 </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> 2 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 9 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 1 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> 7 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 6 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td> 2 </td>
+                        <td> </td>
+                        <td> 4 </td>
+                        <td> </td>
+                        <td> 3 </td>
+                        <td> </td>
+                        <td> 9 </td>
+                        <td> </td>
+                        <td> 8 </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> 5 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 9 </td>
+                        <td> </td>
+                        <td> 7 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 1 </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td> 6 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 5 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 2 </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 7 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> 9 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 8 </td>
+                        <td> </td>
+                        <td> 2 </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> 5 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <section>
+        <h2>Techniques for describing tables</h2>
+        <h4>Example 1</h4>
+        <p id="summary">In the following table, characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.</p>
+        <table aria-describedby="summary">
+            <caption>Characteristics with positive and negative sides</caption>
+            <thead>
+                <tr>
+                    <th id="n1"> Negative </th>
+                    <th> Characteristic </th>
+                    <th> Positive </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td headers="n1 r11"> Sad </td>
+                    <th id="r11"> Mood </th>
+                    <td> Happy </td>
+                </tr>
+                <tr>
+                    <td headers="n1 r12"> Failing </td>
+                    <th id="r12"> Grade </th>
+                    <td> Passing </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+    <section>
+        <h4>Example 2</h4>
+        <p>In the example above the aria-describedby attribute is used to explicitly associate the information with the table for assistive technology users. In the table's caption</p>
+        <table>
+            <caption>
+                <strong>Characteristics with positive and negative sides.</strong>
+                <p>Characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.
+                </p>
+            </caption>
+            <thead>
+                <tr>
+                    <th id="n2"> Negative </th>
+                    <th> Characteristic </th>
+                    <th> Positive </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td headers="n2 r21"> Sad </td>
+                    <th id="r21"> Mood </th>
+                    <td> Happy </td>
+                </tr>
+                <tr>
+                    <td headers="n2 r22"> Failing </td>
+                    <th id="r22"> Grade </th>
+                    <td> Passing </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+    <section>
+        <h4>Example 3</h4>
+        <p>Next to the table, in the same figure</p>
+        <figure>
+            <figcaption>Characteristics with positive and negative sides</figcaption>
+            <p>Characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="n3"> Negative </th>
+                        <th> Characteristic </th>
+                        <th> Positive </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="n3 r31"> Sad </td>
+                        <th id="r31"> Mood </th>
+                        <td> Happy </td>
+                    </tr>
+                    <tr>
+                        <td headers="n3 r32"> Failing </td>
+                        <th id="r32"> Grade </th>
+                        <td> Passing </td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+    <hr>
+    <section>
+        <h4>Example 4</h4>
+        <p>Next to the table, in a figure's figcaption</p>
+        <figure>
+            <figcaption>
+                <strong>Characteristics with positive and negative sides</strong>
+                <p>Characteristics are given in the second column, with the negative side in the left column and the positive side in the right column.
+                </p>
+            </figcaption>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="n4"> Negative </th>
+                        <th> Characteristic </th>
+                        <th> Positive </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="n4 r41"> Sad </td>
+                        <th id="r41"> Mood </th>
+                        <td> Happy </td>
+                    </tr>
+                    <tr>
+                        <td headers="n4 r42"> Failing </td>
+                        <th id="r42"> Grade </th>
+                        <td> Passing </td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+    </section>
+    <hr>
+    <section>
+        <h4>Example 5</h4>
+        <p>Authors may also use other techniques, or combinations of the above techniques, as appropriate. The best option, of course, rather than writing a description explaining the way the table is laid out, is to adjust the table such that no explanation is needed. In the case of the table used in the examples above, a simple rearrangement of the table so that the headers are on the top and left sides removes the need for an explanation as well as removing the need for the use of headers attributes:</p>
+        <table>
+            <caption>Characteristics with positive and negative sides</caption>
+            <thead>
+                <tr>
+                    <th> Characteristic </th>
+                    <th> Negative </th>
+                    <th> Positive </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th> Mood </th>
+                    <td> Sad </td>
+                    <td> Happy </td>
+                </tr>
+                <tr>
+                    <th> Grade </th>
+                    <td> Failing </td>
+                    <td> Passing </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

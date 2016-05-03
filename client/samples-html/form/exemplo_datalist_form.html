@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="W3C - Exemplos - datalist">
+    <title>W3C - Exemplos - datalist</title>
+</head>
+
+<body>
+    <h1>W3C - Exemplos - datalist</h1>
+    <h3>The datalist element can be used in two ways. In the simplest case, the datalist element has just option element children.</h3>
+    <form>
+        <fieldset>
+            <legend>Exemplo 1 - datalist</legend>
+            <label>
+                Sex:
+                <input name=sex list=sexes>
+                <datalist id=sexes>
+                    <option value="Female">
+                        <option value="Male">
+                </datalist>
+            </label>
+        </fieldset>
+    </form>
+    <h3>In the more elaborate case, the datalist element can be given contents that are to be displayed for down-level clients that don't support datalist. In this case, the option elements are provided inside a select element inside the datalist element.</h3>
+    <form>
+        <fieldset>
+            <legend>Exemplo 2 - datalist</legend>
+            <label>
+                Sex:
+                <input name=sex list=sexes>
+            </label>
+            <datalist id=sexes>
+                <label>
+                    or select from the list:
+                    <select name=sex>
+                        <option value=""></option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </label>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+
+</html>

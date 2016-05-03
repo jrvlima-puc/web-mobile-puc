@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/bacivu/12 -->
+<html lang="en">
+
+<head>
+    <meta name="description" content="W3C - Exemplo - Grouping Content">
+    <meta charset="utf-8">
+    <title>W3C - Exemplo - Grouping Content</title>
+</head>
+
+<body>
+  <h1>W3C - Exemplo - Grouping Content</h1>
+    <h2>Elemento p</h2>
+    <h3>The following examples are conforming HTML fragments:</h3>
+    <p>The little kitten gently seated himself on a piece of carpet. Later in his life, this would be referred to as the time the cat sat on the mat.</p>
+    <fieldset>
+        <legend>Personal information</legend>
+        <p>
+            <label>Name:
+                <input name="n">
+            </label>
+            <label>
+                <input name="anon" type="checkbox"> Hide from other users</label>
+        </p>
+        <p>
+            <label>Address:
+                <textarea name="a"></textarea>
+            </label>
+        </p>
+    </fieldset>
+    <p>There was once an example from Femley,
+        <br> Whose markup was of dubious quality.
+        <br> The validator complained,
+        <br> So the author was pained,
+        <br> To move the error from the markup to the rhyming.</p>
+    <h3>The p element should not be used when a more specific element is more appropriate. The following example is technically correct:</h3>
+    <section>
+        <!-- ... -->
+        <p>Last modified: 2001-04-23</p>
+        <p>Author: fred@example.com</p>
+    </section>
+    <h3>However, it would be better marked-up as:</h3>
+    <section>
+        <!-- ... -->
+        <footer>Last modified: 2001-04-23</footer>
+        <address>Author: fred@example.com</address>
+    </section>
+    <h3>Or:</h3>
+    <section>
+        <!-- ... -->
+        <footer>
+            <p>Last modified: 2001-04-23</p>
+            <address>Author: fred@example.com</address>
+        </footer>
+    </section>
+    <h2>Elemento hr</h2>
+    <section>
+        <h1>Communication</h1>
+        <p>There are various methods of communication. This section covers a few of the important ones used by the project.</p>
+        <hr>
+        <p>Communication stones seem to come in pairs and have mysterious properties:
+        </p>
+        <ul>
+            <li>They can transfer thoughts in two directions once activated if used alone.</li>
+            <li>If used with another device, they can transfer one's consciousness to another body.</li>
+            <li>If both stones are used with another device, the consciousnesses switch bodies.</li>
+        </ul>
+        <hr>
+        <p>Radios use the electromagnetic spectrum in the meter range and longer.
+        </p>
+        <hr>
+        <p>Signal flares use the electromagnetic spectrum in the nanometer range.</p>
+    </section>
+    <section>
+        <h1>Food</h1>
+        <p>All food at the project is rationed:</p>
+        <dl>
+            <dt>Potatoes</dt>
+            <dd>Two per day</dd>
+            <dt>Soup</dt>
+            <dd>One bowl per day</dd>
+        </dl>
+        <hr>
+        <p>Cooking is done by the chefs on a set rotation.</p>
+    </section>
+    <p>Dudley was ninety-two, in his second life, and fast approaching time for another rejuvenation. Despite his body having the physical age of a standard fifty-year-old, the prospect of a long degrading campaign within academia was one he regarded with dread. For a supposedly advanced civilization, the Intersolar Commonwealth could be appallingly backward at times, not to mention cruel.</p>
+    <p><i>Maybe it won't be that bad</i>, he told himself. The lie was comforting enough to get him through the rest of the night's shift.
+    </p>
+    <hr>
+    <p>The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond's winters.</p>
+    <h2>Elemento pre</h2>
+    <h3>In the following snippet, a sample of computer code is presented.</h3>
+    <p>This is the <code>Panel</code> constructor:</p>
+    <pre><code>function Panel(element, canClose, closeHandler) {
+  this.element = element;
+  this.canClose = canClose;
+  this.closeHandler = function () { if (closeHandler) closeHandler() };
+}</code></pre>
+    <h3>In the following snippet, samp and kbd elements are mixed in the contents of a pre element to show a session of Zork I.</h3>
+    <pre><samp>You are in an open field west of a big white house with a boarded
+front door.
+There is a small mailbox here.
+
+</samp> <kbd>open mailbox</kbd>
+
+<samp>Opening the mailbox reveals:
+A leaflet.
+
+</samp></pre>
+    <h3>The following shows a contemporary poem that uses the pre element to preserve its unusual formatting, which forms an intrinsic part of the poem itself.</h3>
+    <pre>                maxling
+
+it is with a          heart
+               heavy
+
+that i admit loss of a feline
+        so           loved
+
+a friend lost to the
+        unknown
+                                (night)
+
+~cdr 11dec07</pre>
+    <h2>Elemento blockquote</h2>
+    <figure>
+        <blockquote>
+            "That monster custom, who all sense doth eat Of habit's devil,"
+            <abbr title="et cetera"></abbr> not in Folio "What a falling off was there ! From me, whose love was of that dignity That it went hand in hand even with the vow I made to her in marriage, and to decline Upon a wretch."
+        </blockquote>
+        <footer>
+            —
+            <cite class="title">Shakespeare manual</cite> by
+            <cite class="author">Frederick Gard Fleay</cite>, p19 (in Google Books)
+        </footer>
+    </figure>
+    <h2>Elemento ol</h2>
+    <h3>The following markup shows a list where the order matters, and where the ol element is therefore appropriate. Compare this list to the equivalent list in the ul section to see an example of the same items using the ul element.</h3>
+    <p>I have lived in the following countries (given in the order of when I first lived there):</p>
+    <ol>
+        <li>Switzerland</li>
+        <li>United Kingdom</li>
+        <li>United States</li>
+        <li>Norway</li>
+    </ol>
+    <h3>Note how changing the order of the list changes the meaning of the document. In the following example, changing the relative order of the first two items has changed the birthplace of the author:</h3>
+    <p>I have lived in the following countries (given in the order of when I first lived there):</p>
+    <ol>
+        <li>United Kingdom</li>
+        <li>Switzerland</li>
+        <li>United States</li>
+        <li>Norway</li>
+    </ol>
+    <h2>Elemento ul</h2>
+    <h3>The following markup shows a list where the order does not matter, and where the ul element is therefore appropriate. Compare this list to the equivalent list in the ol section to see an example of the same items using the ol element.</h3>
+    <p>I have lived in the following countries:</p>
+    <ul>
+        <li>Norway</li>
+        <li>Switzerland</li>
+        <li>United Kingdom</li>
+        <li>United States</li>
+    </ul>
+    <h3>Note that changing the order of the list does not change the meaning of the document. The items in the snippet above are given in alphabetical order, but in the snippet below they are given in order of the size of their current account balance in 2007, without changing the meaning of the document whatsoever:</h3>
+    <p>I have lived in the following countries:</p>
+    <ul>
+        <li>Switzerland</li>
+        <li>Norway</li>
+        <li>United Kingdom</li>
+        <li>United States</li>
+    </ul>
+    <h2>Elemento li</h2>
+    <h3>The following example, the top ten movies are listed (in reverse order). Note the way the list is given a title by using a figure element and its figcaption element.</h3>
+    <figure>
+        <figcaption>The top 10 movies of all time</figcaption>
+        <ol>
+            <li value="10">
+                <cite>Josie and the Pussycats</cite>, 2001</li>
+            <li value="9">
+                <cite lang="sh">Црна мачка, бели мачор</cite>, 1998</li>
+            <li value="8">
+                <cite>A Bug's Life</cite>, 1998</li>
+            <li value="7">
+                <cite>Toy Story</cite>, 1995</li>
+            <li value="6">
+                <cite>Monsters, Inc</cite>, 2001</li>
+            <li value="5">
+                <cite>Cars</cite>, 2006</li>
+            <li value="4">
+                <cite>Toy Story 2</cite>, 1999</li>
+            <li value="3">
+                <cite>Finding Nemo</cite>, 2003</li>
+            <li value="2">
+                <cite>The Incredibles</cite>, 2004</li>
+            <li value="1">
+                <cite>Ratatouille</cite>, 2007</li>
+        </ol>
+    </figure>
+    <h3>The markup could also be written as follows, using the reversed attribute on the ol element:</h3>
+    <figure>
+        <figcaption>The top 10 movies of all time</figcaption>
+        <ol reversed>
+            <li>
+                <cite>Josie and the Pussycats</cite>, 2001</li>
+            <li>
+                <cite lang="sh">Црна мачка, бели мачор</cite>, 1998</li>
+            <li>
+                <cite>A Bug's Life</cite>, 1998</li>
+            <li>
+                <cite>Toy Story</cite>, 1995</li>
+            <li>
+                <cite>Monsters, Inc</cite>, 2001</li>
+            <li>
+                <cite>Cars</cite>, 2006</li>
+            <li>
+                <cite>Toy Story 2</cite>, 1999</li>
+            <li>
+                <cite>Finding Nemo</cite>, 2003</li>
+            <li>
+                <cite>The Incredibles</cite>, 2004</li>
+            <li>
+                <cite>Ratatouille</cite>, 2007</li>
+        </ol>
+    </figure>
+    <h2>Elemento dl</h2>
+    <h3>In the following example, one entry ("Authors") is linked to two values ("John" and "Luke").</h3>
+    <dl>
+        <dt>Authors</dt>
+        <dd>John</dd>
+        <dd>Luke</dd>
+        <dt>Editor</dt>
+        <dd>Frank</dd>
+    </dl>
+    <h3>In the following example, one definition is linked to two terms.</h3>
+    <dl>
+        <dt lang="en-US">
+            <dfn>color</dfn>
+        </dt>
+        <dt lang="en-GB">
+            <dfn>colour</dfn>
+        </dt>
+        <dd> A sensation which (in humans) derives from the ability of the fine structure of the eye to distinguish three differently filtered analyses of a view. </dd>
+    </dl>
+    <h3>The following example illustrates the use of the dl element to mark up metadata of sorts. At the end of the example, one group has two metadata labels ("Authors" and "Editors") and two values ("Robert Rothman" and "Daniel Jackson").</h3>
+    <dl>
+        <dt> Last modified time </dt>
+        <dd> 2004-12-23T23:33Z </dd>
+        <dt> Recommended update interval </dt>
+        <dd> 60s </dd>
+        <dt> Authors </dt>
+        <dt> Editors </dt>
+        <dd> Robert Rothman </dd>
+        <dd> Daniel Jackson </dd>
+    </dl>
+    <h3>The following example shows the dl element used to give a set of instructions. The order of the instructions here is important (in the other examples, the order of the blocks was not important).</h3>
+    <p>Determine the victory points as follows (use the first matching case):</p>
+    <dl>
+        <dt> If you have exactly five gold coins </dt>
+        <dd> You get five victory points </dd>
+        <dt> If you have one or more gold coins, and you have one or more silver coins </dt>
+        <dd> You get two victory points </dd>
+        <dt> If you have one or more silver coins </dt>
+        <dd> You get one victory point </dd>
+        <dt> Otherwise </dt>
+        <dd> You get no victory points </dd>
+    </dl>
+    <p>The following snippet shows a dl element being used as a glossary. Note the use of dfn to indicate the word being defined.</p>
+    <dl>
+        <dt>
+            <dfn>Apartment</dfn>, n.</dt>
+        <dd>An execution context grouping one or more threads with one or more COM objects.</dd>
+        <dt>
+            <dfn>Flat</dfn>, n.</dt>
+        <dd>A deflated tire.</dd>
+        <dt>
+            <dfn>Home</dfn>, n.</dt>
+        <dd>The user's login directory.</dd>
+    </dl>
+    <h2>Elemento figure</h2>
+    <h3>This example shows the figure element to mark up a code listing.</h3>
+    <p>In <a href="#l4">listing 4</a> we see the primary core interface API declaration.</p>
+    <figure id="l4">
+        <figcaption>Listing 4. The primary core interface API declaration.</figcaption>
+        <pre><code>interface PrimaryCore {
+ boolean verifyDataLine();
+ void sendData(in sequence data);
+ void initSelfDestruct();
+}</code></pre>
+    </figure>
+    <p>The API is designed to use UTF-8.</p>
+    <h3>Here we see a figure element to mark up a photo that is the main content of the page (as in a gallery).</h3>
+    <figure>
+        <img src="bubbles-work.jpeg" alt="Bubbles, sitting in his office chair, works on his
+           latest project intently.">
+        <figcaption>Bubbles at work</figcaption>
+    </figure>
+    <nav><a href="19414.html">Prev</a> — <a href="19416.html">Next</a></nav>
+    <h3>In this example, we see an image that is not a figure, as well as an image and a video that are. The first image is literally part of the example's second sentence, so it's not a self-contained unit, and thus figure would be inappropriate.</h3>
+    <h2>Malinko's comics</h2>
+    <p>This case centered on some sort of "intellectual property" infringement related to a comic (see Exhibit A). The suit started after a trailer ending with these words:</p>
+    <blockquote>
+        <img src="promblem-packed-action.png" alt="ROUGH COPY! Promblem-Packed Action!">
+    </blockquote>
+    <p>...was aired. A lawyer, armed with a Bigger Notebook, launched a preemptive strike using snowballs. A complete copy of the trailer is included with Exhibit B.</p>
+    <figure>
+        <img src="ex-a.png" alt="Two squiggles on a dirty piece of paper.">
+        <figcaption>Exhibit A. The alleged
+            <cite>rough copy</cite> comic.</figcaption>
+    </figure>
+    <figure>
+        <video src="ex-b.mov"></video>
+        <figcaption>Exhibit B. The
+            <cite>Rough Copy</cite> trailer.</figcaption>
+    </figure>
+    <p>The case was resolved out of court.</p>
+    <h3>Here, a part of a poem is marked up using figure.</h3>
+    <figure>
+        <p>'Twas brillig, and the slithy toves
+            <br> Did gyre and gimble in the wabe;
+            <br> All mimsy were the borogoves,
+            <br> And the mome raths outgrabe.</p>
+        <figcaption>
+            <cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</figcaption>
+    </figure>
+    <h3>In this example, which could be part of a much larger work discussing a castle, nested figure elements are used to provide both a group caption and individual captions for each figure in the group:</h3>
+    <figure>
+        <figcaption>The castle through the ages: 1423, 1858, and 1999 respectively.</figcaption>
+        <figure>
+            <figcaption>Etching. Anonymous, ca. 1423.</figcaption>
+            <img src="castle1423.jpeg" alt="The castle has one tower, and a tall wall around it.">
+        </figure>
+        <figure>
+            <figcaption>Oil-based paint on canvas. Maria Towle, 1858.</figcaption>
+            <img src="castle1858.jpeg" alt="The castle now has two towers and two walls.">
+        </figure>
+        <figure>
+            <figcaption>Film photograph. Peter Jankle, 1999.</figcaption>
+            <img src="castle1999.jpeg" alt="The castle lies in ruins, the original tower all that remains in one piece.">
+        </figure>
+    </figure>
+    <h3>The figure is sometimes referenced only implicitly from the content:</h3>
+    <article>
+        <h1>Fiscal negotiations stumble in Congress as deadline nears</h1>
+        <figure>
+            <img src="http://www.examiner.com/images/blog/EXID22698/images/obama-reid.jpg" alt="Obama and Reid sit together smiling in the Oval Office.">
+            <figcaption>Barrak Obama and Harry Reid. White House press photograph.</figcaption>
+        </figure>
+        <p>Negotiations in Congress to end the fiscal impasse sputtered on Tuesday, leaving both chambers grasping for a way to reopen the government and raise the country's borrowing authority with a Thursday deadline drawing near.</p>
+        ...
+    </article>
+
+
+</body>
+
+</html>

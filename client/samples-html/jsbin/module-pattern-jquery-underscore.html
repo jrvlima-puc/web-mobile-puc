@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/qoxona/11 -->
+<html>
+<head>
+<script src="http://jashkenas.github.io/underscore/underscore-min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<meta name="description" content="Module Pattern - Add jQuery e Underscore">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// Global module
+var AppBlog = (function () {
+ 
+    function privateMethod1(){
+        console.log("xyz");
+    }
+ 
+    function privateMethod2(){
+      console.log( _.min([10, 5, 100, 2, 1000]) );
+    }
+ 
+    return{
+        publicMethod: function(){
+            privateMethod1();
+        }
+    };
+ 
+// Pull in jQuery and Underscore
+})();
+ 
+AppBlog.publicMethod();
+
+
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+<script src="//jashkenas.github.io/underscore/underscore-min.js"><\/script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"><\/script>
+<meta name="description" content="Module Pattern - Add jQuery e Underscore">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+</body>
+</html></script>
+
+
+<script id="jsbin-source-javascript" type="text/javascript">// Global module
+var AppBlog = (function () {
+ 
+    function privateMethod1(){
+        console.log("xyz");
+    }
+ 
+    function privateMethod2(){
+      console.log( _.min([10, 5, 100, 2, 1000]) );
+    }
+ 
+    return{
+        publicMethod: function(){
+            privateMethod1();
+        }
+    };
+ 
+// Pull in jQuery and Underscore
+})();
+ 
+AppBlog.publicMethod();
+
+</script></body>
+</html>

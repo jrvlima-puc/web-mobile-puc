@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- source: http://jsbin.com/forici/2 -->
+<html>
+<head>
+<meta name="description" content="Constructors With Prototypes" >
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function Car( model, year, miles ) {
+ 
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+ 
+}
+ 
+ 
+// Note here that we are using Object.prototype.newMethod rather than
+// Object.prototype so as to avoid redefining the prototype object
+Car.prototype.toString = function () {
+  return this.model + " has done " + this.miles + " miles";
+};
+ 
+// Usage:
+ 
+var civic = new Car( "Honda Civic", 2009, 20000 );
+var mondeo = new Car( "Ford Mondeo", 2010, 5000 );
+ 
+console.log( civic.toString() );
+console.log( mondeo.toString() );
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Constructors With Prototypes" >
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+</body>
+</html></script>
+
+
+<script id="jsbin-source-javascript" type="text/javascript">function Car( model, year, miles ) {
+ 
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+ 
+}
+ 
+ 
+// Note here that we are using Object.prototype.newMethod rather than
+// Object.prototype so as to avoid redefining the prototype object
+Car.prototype.toString = function () {
+  return this.model + " has done " + this.miles + " miles";
+};
+ 
+// Usage:
+ 
+var civic = new Car( "Honda Civic", 2009, 20000 );
+var mondeo = new Car( "Ford Mondeo", 2010, 5000 );
+ 
+console.log( civic.toString() );
+console.log( mondeo.toString() );</script></body>
+</html>
