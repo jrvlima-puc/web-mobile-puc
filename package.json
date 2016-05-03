@@ -5,7 +5,9 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "grunt"
+    "postinstall": "grunt heroku",
+    "start": "nodemon server/bin/www"
+
   },
   "dependencies": {
     "body-parser": "~1.13.2",
