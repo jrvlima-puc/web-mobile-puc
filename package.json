@@ -36,13 +36,19 @@
     "grunt-express-server": "latest",
     "grunt-githooks": "latest",
     "grunt-jsbeautifier": "latest",
-    "grunt-karma": "latest",
     "grunt-newer": "latest",
     "grunt-nodemon": "^0.4.2",
     "grunt-shell": "latest",
     "grunt-text-replace": "latest",
-    "jasmine-core": "latest",
     "jshint-stylish": "latest",
+    "load-grunt-config": "latest",
+    "load-grunt-tasks": "latest",
+    "requirejs": "latest",
+    "time-grunt": "latest"
+  },
+  "devDependencies": {
+    "grunt-karma": "latest",
+    "jasmine-core": "latest",
     "karma": "latest",
     "karma-chrome-launcher": "latest",
     "karma-coverage": "latest",
@@ -52,11 +58,7 @@
     "karma-junit-reporter": "latest",
     "karma-phantomjs-launcher": "latest",
     "karma-requirejs": "latest",
-    "load-grunt-config": "latest",
-    "load-grunt-tasks": "latest",
-    "phantomjs": "latest",
-    "requirejs": "latest",
-    "time-grunt": "latest"
+    "phantomjs": "latest"
   },
   "author": "João Vinagre",
   "license": "ISC"
