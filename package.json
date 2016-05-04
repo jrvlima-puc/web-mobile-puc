@@ -5,9 +5,9 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "postinstall": "grunt heroku",
-    "start": "nodemon server/bin/www"
-
+    "start": "node index.js",
+    "test": "karma",
+    "postinstall": "bower install && grunt build"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
