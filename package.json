@@ -4,6 +4,11 @@
   "description": "Web Mobile - PUC Minas",
   "main": "app.js",
   "private": true,
+  "engines": {
+    "node": "4.4.3",
+    "npm": "2.15.1"
+  },
+  "cacheDirectories": ["node_modules", "client/components" ],
   "scripts": {
     "start": "node server/bin/www",
     "test": "karma",
