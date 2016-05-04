@@ -39,6 +39,7 @@
     "grunt-newer": "latest",
     "grunt-nodemon": "^0.4.2",
     "grunt-shell": "latest",
+    "grunt-karma": "latest",
     "grunt-text-replace": "latest",
     "jshint-stylish": "latest",
     "load-grunt-config": "latest",
@@ -47,7 +48,6 @@
     "time-grunt": "latest"
   },
   "devDependencies": {
-    "grunt-karma": "latest",
     "jasmine-core": "latest",
     "karma": "latest",
     "karma-chrome-launcher": "latest",
