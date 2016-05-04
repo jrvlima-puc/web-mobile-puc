@@ -22,9 +22,7 @@
     "express-handlebars": "^3.0.0",
     "morgan": "~1.6.1",
     "nodemon": "^1.9.2",
-    "serve-favicon": "~2.3.0"
-  },
-  "devDependencies": {
+    "serve-favicon": "~2.3.0",
     "bower": "latest",
     "grunt": "latest",
     "grunt-cli": "latest",
