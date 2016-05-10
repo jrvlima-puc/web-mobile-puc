@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<!--
+Read Only by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Web Mobile - PUC MG - João Vinagre</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/template/css/main.css"/>
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+</head>
+<body>
+
+  <!-- Header -->
+  <section id="header">
+
+    <header>
+      <span class="image avatar"><img src="/template/images/Logo-Diretoria-Educacao-Continuada.jpg" alt=""/></span>
+      <h1 id="logo"><a href="/index.html">Web Mobile</a></h1>
+      <p></p>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#one" class="active">Introdução</a></li>
+        <li><a href="#two">Adicionando CSS</a></li>
+        <li><a href="#three">Conceitos Básicos</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <ul class="icons">
+        <li><a href="https://br.linkedin.com/in/jrvlima" class="icon fa-linkedin"><span
+          class="label">Linkedin</span></a></li>
+          <li><a href="http://codepen.io/jrvlima/" class="icon fa-codepen"><span class="label">CodePen</span></a></li>
+          <li><a href="https://github.com/jrvlima" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="mailto:joao.lima@vilivesoft.com?Subject=Web%20Mobile%202016" class="icon fa-envelope"><span
+            class="label">Email</span></a></li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+          <!-- One -->
+          <section id="one">
+            <div class="container">
+              <header class="major">
+
+                <h2>CSS</h2>
+                <p>Introdução
+
+                </p>
+
+              </header>
+
+              <p>
+
+                CSS é uma linguagem de Folha de Estilo usada para descrever a apresentação de um documento HTML.
+                <h3>Links de Referência</h3>
+
+                <ul>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN - CSS Reference</a></li>
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started" target="_blank">MDN - CSS Tutorial</a></li>
+                  <li><a href="http://www.w3.org/TR/css3-selectors/" target="_blank">W3C - Seletores</a></li>
+                </ul>
+
+              </p>
+
+
+            </div>
+          </section>
+
+          <!-- Two -->
+          <section id="two">
+            <div class="container">
+
+
+              <h3>W3C - Adicionando CSS</h3>
+
+              <p>
+                <ul class="list-html-elements">
+                  <li>
+
+                    <pre><code>
+  &lt;html lang="en"&gt;
+
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="description" content="Exemplos - Formas de Carregar - css"&gt;
+    &lt;-- Via recurso externo ao documento, de um arquivo css --&gt;
+    &lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
+    &lt;title&gt;Exemplos - Formas de Carregar - css&lt;/title&gt;
+    &lt;-- embutido no documento --&gt;
+    &lt;style&gt;
+      h1 {
+        color: #ff0000;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Exemplos - Formas de Carregar - css&lt;/h1&gt;
+    &lt;-- Inline, no elemento HTML --&gt;
+    &lt;h2 style="color: #00ff00"&gt;CSS&lt;/h2&gt;
+    &lt;h3&gt;Adicionando CSS&lt;/h3&gt;
+
+  &lt;/body&gt;
+
+  &lt;/html&gt;
+                    </code></pre>
+                  </li>
+
+                </ul>
+
+              </p>
+
+            </div>
+          </section>
+
+          <section id="three">
+            <div class="container"><h3>W3C - Conceitos Básicos</h3>
+
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance"><h4>Cascade, Herança e Especificidade</h4></a>
+
+                  <ul>
+                    <li>Prioridades
+                      <ul>
+                        <li>Link Externo.</li>
+                        <li>No elemento <pre>
+                          &lt;head/&gt;</pre></li>
+                          <li>Atributo inline</li>
+                          <li>!important</li>
+                          <li>Prioridade por ordem de declaração documento é considerada</li>
+                          <li>Propriedades não conflitantes são combinadas</li>
+                        </ul>
+                      </li>
+                      <li>Herança
+                        <ul>
+                          <li>Elementos aninhados herdam estilos do pai; Seletores podem ser aninhados para sobrescrever propriedades do pai.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="http://specificity.keegan.st">Especificidade</a>
+                        <p>
+                          <ul>
+                            <li>Elemento</li>
+                            <li>Classe</li>
+                            <li>ID</li>
+                            <li>Inline</li>
+                          </ul>
+                        </p>
+                        <div class="mdn-specificity">
+                          <p>
+                            <table class="standard-table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Selector</th>
+                                  <th scope="col">Thousands</th>
+                                  <th scope="col">Hundreds</th>
+                                  <th scope="col">Tens</th>
+                                  <th scope="col">Ones</th>
+                                  <th scope="col">Total specificity</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><code>h1</code></td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>0001</td>
+                                </tr>
+                                <tr>
+                                  <td><code>#important</code></td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0100</td>
+                                </tr>
+                                <tr>
+                                  <td><code>h1 + p::first-letter</code></td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>3</td>
+                                  <td>0003</td>
+                                </tr>
+                                <tr>
+                                  <td><code>li &gt; a[href=*"en-US"] &gt; .inline-warning</code></td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                  <td>0022</td>
+                                </tr>
+                                <tr>
+                                  <td><code>#important div &gt; div &gt; a:hover</code>, inside a <a href="/en-US/docs/Web/HTML/Element/style" title="The HTML &lt;style&gt; element contains style information for a document, or part of a document. By default, the style instructions written inside that element are expected to be CSS."><code>&lt;style&gt;</code></a> element</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td>3</td>
+                                  <td>1113</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </p>
+                        </div>
+
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank"><h4>Floating</h4></a>
+                    <p>
+                      Remove elementos do fluxo, flow do documento e move para um canto, edge específico; Outro conteúdo, texto ou inline dentro do elemento pai se posicionará em volta do float
+                    </p>
+                    <pre>
+                      <code>
+div {
+  float: left;
+  float: right;
+  float: none;
+
+  /* Global values */
+  float: inherit;
+  float: initial;
+  float: unset;
+
+}
+                      </code>
+                    </pre>
+
+
+
+                    <img src="images/Float.png" alt="" width="100%" />
+
+                  </li>
+
+                  <li><h4>Float - Clearing</h4>
+
+                    <p>
+                      Quando items float são maiores que conteúdos não float
+                    </p>
+
+
+
+                    <img src="images/Float-Clearing.png" alt="" width="100%" />
+
+                    <ul>
+                      <li>Manualmente
+                      </li>
+                      <li>ou clearfix</li>
+                    </ul>
+                  </li>
+
+                  <li><h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Posição</a></h4>
+                    <ul>
+                      <li>position: static / <a href="http://codepen.io/jrvlima/pen/mPorem">relative</a> / absolute / fixed</li>
+                      <li>static - default</li>
+                      <li>usando qualquer valor diferente de static faz com que o elemento seja posicionado</li>
+                      <li>elementos posicionados podem usar top, bottom, left, right</li>
+                      <li><a href="http://codepen.io/jrvlima/pen/RWBOgo">codepen</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Box Model</h4>
+                    <img src="images/css-box-model-standard.svg" alt="" />
+                  </li>
+
+                  <li>
+                    <h4>DRY - Don't Repeat Yourself</h4>
+                    <ul>
+                      <li>Aplicar conteúdo a elemento pai ao invés de repetir em filhos</li>
+                      <li>Combinação de seletores com vírgulas</li>
+                      <li>Abstração de seletores - ex: adicionar classes</li>
+                      <li>Shorthand</li>
+                    </ul>
+                    <pre>
+                      <code>
+body {
+  font: 12px;
+}
+
+div {
+  color: #ccc;
+}
+
+.posts {
+  width: 50px;
+  height: 50px;
+}
+
+font: 16px/18px bold italic sans-serif;
+margin: 10px 15px 5px 20px;
+                      </code>
+                    </pre>
+                  </li>
+
+                  <li>
+                    <h4>display</h4>
+                    <p>
+                      display: none / block / inline / inline-block
+                    </p>
+                    <img src="images/Display.png" alt="" width="90%" />
+                  </li>
+
+
+                  <li>
+                    <h4>centralizando</h4>
+                    <ul>
+                      <li>margin: 0 auto;</li>
+                      <li>text-align: center;</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>reset CSS</h4>
+                    <ul>
+                      <li><a href="http://meyerweb.com/eric/tools/css/reset/">CSS Reset</a></li>
+                      <li><a href="http://necolas.github.io/normalize.css/">Normalize</a></li>
+                    </ul>
+                  </li>
+
+
+                  <li>
+                    <h4>Uso de Images</h4>
+                    <ul>
+                      <li>Conteúdo - Imagens Inline</li>
+                      <li>Layout - Background Images</li>
+                    </ul>
+                  </li>
+
+
+
+                  <li>
+                    <h4>Crop de Imagens</h4>
+                    <ul>
+                      <li><a href="https://css-tricks.com/crop-top/">CSS Tricks Crop</a></li>
+                      <li>setar overflow: hidden, height and width no wrap; setar height: auto e width similar ao parent no child</li>
+                      <li>mude o tamanho das suas imagens para quadrados</li>
+                      <li>mude o tamanho no lado do servidor</li>
+                      <li>no CMS indique instruções para upload</li>
+                    </ul>
+                    <pre>
+                      <code>
+&lt;h4&gt;Férias&lt;/&gt;
+&lt;ul&gt;
+  &lt;li class="crop" &gt;
+    &lt;img src="farm.jpg" /&gt;
+  &lt;/&gt;
+
+
+.crop {
+  overflow: hidden;
+  height: 400px;
+  width: 500px;
+}
+.crop img {
+  height: 400px;
+  width: auto;
+}
+
+
+                      </code>
+                    </pre>
+                  </li>
+
+                  <li>
+                    <h4>Sprites</h4>
+                    <ul>
+                      <li><a href="http://codepen.io/jrvlima/pen/xwaGbV">Codepen.io</a></li>
+                      <li><a href="https://css-tricks.com/css-sprites/">CSS Tricks</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+            </section>
+
+
+          </div>
+
+          <!-- Footer -->
+          <section id="footer">
+            <div class="container">
+              <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="/template/js/vendor/jquery.min.js"></script>
+        <script src="/template/js/vendor/jquery.scrollzer.min.js"></script>
+        <script src="/template/js/vendor/jquery.scrolly.min.js"></script>
+        <script src="/template/js/vendor/skel.min.js"></script>
+        <script src="/template/js/vendor/util.js"></script>
+        <!--[if lte IE 8]>
+        <script src="/template/js/vendor/ie/respond.min.js"></script><![endif]-->
+        <script src="/template/js/vendor/main.js"></script>
+
+      </body>
+      </html>
