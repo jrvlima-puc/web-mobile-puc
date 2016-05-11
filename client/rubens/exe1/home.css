@@ -1,0 +1,33 @@
+body{
+  font-size: 12
+}
+
+nav {
+  --position: absolute;
+  display: inline-block;
+  left: 0px;
+  width: 200px;
+}
+section {
+  /* position is static by default */
+  margin-left: 200px;
+}
+footer {
+}
+body {
+  margin-bottom: 120px;
+}
+
+.post{
+  padding: 10px
+
+}
+
+page.footerpage{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
