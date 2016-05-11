@@ -1,0 +1,16 @@
+body
+{
+  float: left;
+  font-size: 12px;
+}
+
+.rodape_sessao
+{
+  font-size: 10px;
+}
+
+.rodape_pagina
+{
+  float: right;
+  font-size: 8px;
+}
