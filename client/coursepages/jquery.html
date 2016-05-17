@@ -1,0 +1,754 @@
+<!DOCTYPE HTML>
+<!--
+Read Only by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Web Mobile - PUC MG - João Vinagre</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/template/css/main.css"/>
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+</head>
+<body>
+
+  <!-- Header -->
+  <section id="header">
+
+    <header>
+      <span class="image avatar"><img src="/template/images/Logo-Diretoria-Educacao-Continuada.jpg" alt=""/></span>
+      <h1 id="logo"><a href="/index.html">Web Mobile</a></h1>
+      <p></p>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#one" class="active">Introdução</a></li>
+        <li><a href="#two">Overview</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <ul class="icons">
+        <li><a href="https://br.linkedin.com/in/jrvlima" class="icon fa-linkedin"><span
+          class="label">Linkedin</span></a></li>
+          <li><a href="http://codepen.io/jrvlima/" class="icon fa-codepen"><span class="label">CodePen</span></a></li>
+          <li><a href="https://github.com/jrvlima" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="mailto:joao.lima@vilivesoft.com?Subject=Web%20Mobile%202016" class="icon fa-envelope"><span
+            class="label">Email</span></a></li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+          <!-- One -->
+          <section id="one">
+            <div class="container">
+              <header class="major">
+
+                <h2>Javascript</h2>
+                <p>Introdução
+
+                </p>
+
+              </header>
+
+              <p>
+
+                <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                  JavaScript (JS) is a lightweight, interpreted, programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+                  <hr>
+                  <cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN - Javascript</a></cite>
+                </blockquote>
+
+
+                <h3>Links de Referência</h3>
+
+                <ul>
+                  <li><a href="http://jsforcats.com/" target="_blank">JavaScript For Cats</a></li>
+                  <li><a href="https://www.thinkful.com/learn/javascript-best-practices-1/" target="_blank">Javascript Best Practices 1</a></li>
+                  <li><a href="https://www.thinkful.com/learn/javascript-best-practices-2/" target="_blank">Javascript Best Pracitices 2</a></li>
+                  <li><a href="http://shop.oreilly.com/product/9780596517748.do" target="_blank">JavaScript: The Good Parts</a></li>
+                  <li><a href="http://addyosmani.com/resources/essentialjsdesignpatterns" target="_blank">Learning JavaScript Design Patterns</a></li>
+                  <li><a href="http://addyosmani.com/largescalejavascript/" target="_blank">Patterns For Large-Scale JavaScript Application Architecture</a></li>
+                  <li><a href="http://todomvc.com/" target="_blank">Todo MVC</a></li>
+                  <li><a href="http://slides.com/avenuecode/design-patterns-for-large-scale-javascript" target="_blank">Design Patterns for Large-Scale Javascript</a></li>
+                  <li><a href="http://shop.oreilly.com/product/9780596806767.do" target="_blank">JavaScript Patterns</a></li>
+                  <li><a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern" target="_blank">JavaScript Module Pattern</a></li>
+                  <li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+                  <li><a href="http://tableless.com.br/javascript-entendendo-o-this/#.UhVmEGSbj_s" target="_blank">JavaScript: entendendo o this</a></li>
+                  <li><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/" target="_blank">Understanding Scope and Context in JavaScript</a></li>
+                  <li><a href="http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html" target="_blank">JavaScript Scoping and Hoisting</a></li>
+
+                </ul>
+
+              </p>
+
+
+            </div>
+          </section>
+
+          <!-- Two -->
+          <section id="two">
+            <div class="container">
+
+
+              <h3>Overview</h3>
+
+              <p>
+                <ul class="list-html-elements">
+                  <li>
+
+                    <pre><code>
+/*
+  Comentário multilinha
+*/
+
+// comentário de única linha
+
+var name, firstName, lastName, x;  // declarando variáveis
+
+name = firstName + ' ' + lastName;  // atribuindo valores a variáveis
+
+foo(firstName, lastName);  // chamando a função foo
+obj.bar(name);  // chamando o método bar do objeto obj
+
+// A conditional statement
+if (name === 'Douglas Crockford') {  // Is `name` equal to 'Douglas Crockford'?
+    x = 'Papa do JS';
+}
+
+// Definindo a função `baz`
+function baz(a, b) {
+    return a + b;
+}
+
+/*ponto e vírgula é opicional
+  mas seu uso é recomendável
+*/
+
+
+//function expression terminam com um ponto e vírgula - em uma declaração 'var'
+var getName = function() {
+  return name;
+};
+                    </code></pre>
+                  </li>
+
+
+                  <li><h4>Principais Categorias</h4>
+                    <ul>
+                      <li>Statements(declarações)
+                        <p>
+                          do things
+                          <pre>
+                            <code>
+var balance
+
+//if-then-else com declaração
+var x;
+if (y >= 0) {
+    x = y;
+} else {
+    x = -y;
+}</code>
+                          </pre>
+                        </p>
+                      </li>
+                      <li>Expressions(expressões)
+                        <p>
+                          produce values
+                          <pre>
+                            <code>
+1000 * 1.3
+
+//como expressão
+var x = y >= 0 ? y : -y;
+
+//pode ser usado como argumento
+myFunction(y >= 0 ? y : -y)</code>
+                          </pre>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Valores</h4>
+                    <ul>
+                      <li><b>Valores primitivos: </b> booleans, numbers, strings, null, undefined</li>
+                      <li>Todos os outros são objetos</li>
+                      <li>A diferença principal entre primitivos e objetos em Javascript
+                        <ul>
+                          <li>cada objeto tem uma identidade única e é somente igual a ele mesmo</li>
+                          <li>valores primitivos que possuem o mesmo valor são considerados o mesmo</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Valores Primitivos</h4>
+                    <ul>
+                      <li>Booleans: true, false</li>
+                      <li>Numbers</li>
+                      <li>String</li>
+                      <li>undefined, null</li>
+                      <li>
+
+                          <b>comparados por valor</b>
+
+                        <pre>
+                          <code>
+3 === 3 //true
+3 == '3' //true
+'PUC' === 'PUC' //true</code></pre></li>
+                      <li><b>sempre imutáveis</b></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Objetos</h4>
+                    <ul>
+                      <li>Plain objetcs
+<pre>
+<code>{
+    name: 'João Vinagre',
+    email: 'joao.lima@vilivesoft.com'
+}</code>
+</pre>
+                      </li>
+                      <li>Arrays</li>
+                      <li>Expressões Regulares</li>
+                      <li>Comparados por referência</li>
+                      <li>Mutáveis</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>
+<pre style="display: inline;">
+undefined e NULL
+</pre></h4>
+                    <ul>
+                      <li><pre style="display: inline;">undefined</pre>   <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>   "no value"
+                        <pre>
+                          <code>
+var name;
+name //undefined
+
+function helloWorld(name) { return (name? "Hello " + name: "Hello World"); }
+
+helloWorld() //Hello World
+
+var person = {};
+person.name //undefined
+
+
+if(name === undefined || name === null) { ... }
+
+if(!name) { ... }
+
+</code>
+                        </pre>
+
+                      </li>
+                      <li><pre style="display: inline;">null</pre>   <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>   "no object"</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>
+<pre style="display: inline;">typeof instanceof</pre>
+</h4>
+                    <pre>
+                      <code>
+typeof value
+value instanceof Constr
+
+
+typeof 'Galo'
+//'string'
+
+
+[] instanceof Array
+//true
+
+                      </code>
+                    </pre>
+                  </li>
+                  <li>
+                    <h4>Booleans</h4>
+                    <ul>
+                      <li>&&(And), ||(Or) <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> short-cirtuiting</li>
+                      <li>!(not)</li>
+                      <li>===, !==, ==, != - Igualdade</li>
+                      <li>>, >=, <, <=</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Truthy and Falsy</h4>
+                    <b>false</b>
+                    <ul>
+                      <li>undefined, null</li>
+                      <li>false</li>
+                      <li>-0, NaN</li>
+                      <li>''</li>
+                    </ul>
+                    <p>
+                      anything else is <b>true</b>
+                    </p>
+                  </li>
+
+                  <li>
+                    <h4>Numbers</h4>
+                    <p>
+                      Todos os números em JS são floating-point
+                    </p>
+                    <pre>
+<code>
+1 === 1.0 //true
+</code>
+                    </pre>
+                    <ul>
+                      <li>NaN("not a number")
+                        <pre>
+                          <code>
+Number('PUC') // NaN - conversão inválida
+                          </code>
+                        </pre>
+
+                      </li>
+                      <li>Infinity
+                        <pre>
+                          <code>
+3 / 0 //Infinity
+Math.pow(2, 1024) // too large - Infinity
+                          </code>
+                        </pre>
+                      </li>
+
+                      <li>
+                        <h4>Operadores</h4>
+
+                        <ul>
+                          <li>Adição: x + y</li>
+                          <li>Subtração: x - y</li>
+                          <li>Multiplicação: x * y</li>
+                          <li>Divisão: x / y</li>
+                          <li>Módulo: x % y</li>
+                          <li>Incremento: ++x, x++</li>
+                          <li>Decremento: --x, x--</li>
+                          <li>Negativo: -x</li>
+                          <li>Conversão para número: +valor</li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <h4>Strings</h4>
+                        <pre>
+                          <code>
+'Minas Gerais'
+"Minas Gerais"
+
+'Seu nome era "Valdemar"'
+"Seu nome era \"Valdemar\""
+
+var nome = 'Casa Grande'
+str[1] // canvas
+
+str.length // 11
+
+//Concatenando strings
+var name = "Belo " + "Horizonte";
+
+//Alguns Métodos
+"Minas".slice(1) //inas
+
+"Minas".slice(1 2) //
+
+"Minas   ".trim() //Minas - remove espaços em branco
+
+"Minas".indexOf("Gerais") === -1 //true
+
+                          </code>
+                        </pre>
+                      </li>
+
+                      <li>
+                        <h4>Condições</h4>
+                        <pre>
+<code>
+if(a === true) {
+
+}
+
+if(a === true) {
+
+} else {
+  false
+}
+
+if(a === true) {
+
+} else if(b === true) {
+
+} else if(c === true) {
+
+} else {
+
+}
+
+
+switch(cor) {
+  case 'branco':
+    //
+    break;
+  case 'preto':
+    //
+    break;
+  default:
+    //
+}
+
+</code>
+
+                        </pre>
+                      </li>
+
+                      <li>
+                        <h4>Loops</h4>
+
+
+                        <pre>
+<code>
+for(inicialização; condição; iteração)
+
+for(var i = 0, z = arr.length; i < z; i++) {
+  console.dir(arr[i]);
+}
+
+</code>
+                        </pre>
+
+                        <p>
+                          Javascript também possui loops <pre style="display: inline;">do while</pre> e <pre style="display: inline;">while</pre>, também como instruções de <pre style="display: inline;">break</pre> e
+                          <pre style="display: inline;">continue</pre>
+                        </p>
+
+                      </li>
+
+                    </ul>
+                  </li>
+
+                  <li>
+                    <h4>Funções</h4>
+
+                    <pre>
+                      <code>
+
+//declarando uma função
+function whithdraw(amount) {
+  if(balance - amount > 0) {
+    balance -= amount
+  }
+}
+
+//atribuindo a uma variável
+var deposit = function(amount) {
+  balance += amount;
+}
+
+//passando uma função como parâmetro
+$.get("/api/users", function(data) {
+  console.dir(data);
+});
+                      </code>
+                    </pre>
+
+                    <h5>Hoisting</h5>
+<p>
+  Em JS não importa aonde a variável foi declarada ela vai ser enviada para o topo do escopo
+</p>
+
+                    <pre>
+<code>
+(function() {
+  var name;
+
+  /*
+    getName já é uma variável local, declarada no escopo da função,
+    mas nem um valor, ou função foi atribuido a getName ainda
+
+  */
+  getName();
+
+  var getName = function() {
+    console.log(name);
+  }
+
+
+  /*
+    nesse momento getName já é uma função mas name é undefined
+
+  */
+  getName();
+
+  name = "Minas Gerais";
+
+  name = "São Paulo";
+
+})();
+</code>
+
+                    </pre>
+
+                    <h5>arguments</h5>
+
+                    <p>
+                      Em JS você pode chamar qualquer função com qualquer número de argumentos, JS vai mapear os argumentos com aqueles declarados na função e vai mapear todos os argumentos em um objeto "array like" chamado "arguments"
+                    </p>
+
+                    <pre>
+                      <code>
+var add = function(a, b) {
+  console.dir(arguments.toString());
+  console.log(a + b);
+}
+
+add(2, 5, 10, 12, 16);
+
+//2,5,10,12,16
+//7
+
+                      </code>
+                    </pre>
+
+                  <h5>Tratamento de Excessões</h5>
+
+                  <pre>
+                    <code>
+function getPerson(id) {
+    if (id < 0) {
+        throw new Error('ID must not be negative: '+id);
+    }
+    return { id: id }; // normally: retrieved from database
+}
+
+function getPersons(ids) {
+    var result = [];
+    ids.forEach(function (id) {
+        try {
+            var person = getPerson(id);
+            result.push(person);
+        } catch (exception) {
+            console.log(exception);
+        }
+    });
+    return result;
+}
+
+> getPersons([2, -5, 137])
+[Error: ID must not be negative: -5]
+[ { id: 2 }, { id: 137 } ]
+
+
+                    </code>
+                  </pre>
+
+                  <h5>Escopo</h5>
+
+                  <p>
+                    O espcopo de variáveis é sempre a função, não o bloco onde ela se encontra
+                  </p>
+
+                  <h5>Closures</h5>
+
+                  <p>
+                    Toda a função mantém uma referência as valores da função na qual ela se encontra, mesmo se a função interna sair do escopo da função externa.
+
+                  </p>
+
+<pre>
+  <code>
+
+
+function makeFun() {
+
+  var name = 'Mozilla';
+  function displayName() {
+    console.log(name);
+  }
+
+  return displayName;
+
+}
+
+var myFunc = makeFun();
+
+myFunc();
+
+
+//IIFE(immediately invoked function expression)
+var accountModule = (function() {
+  //private
+  var accounts = [];
+
+  return {
+    addAccount: function(account) {
+      accounts.push(account);
+    }
+  }
+
+})();
+
+
+  </code>
+</pre>
+
+<p>
+  Closure é uma função mais a conexão com todas as variáveis dos escopos que estão em torno
+</p>
+
+
+                  </li>
+<li><h4>Orientação a Objeto</h4>
+
+<ul>
+  <li><h5>Single Objects</h5>
+    <pre>
+      <code>
+var person = {
+
+  name: "Gilberto Gil",
+  city: "Salvador",
+
+  friends: [
+    {name: "Caetano Veloso", city: "Bahia"},
+    {name: "Milton Nascimento", city: "Belo Horizonte"},
+    {name: "Chico Buarque", city: "Rio de Janeiro"}
+  ],
+
+  toString: function() {
+    return this.name + " is from " + this.city;
+  }
+
+  printFriends: function() {
+    var that = this;
+    this.friends.forEach(function(friend) {
+      //this is undefined
+      console.log(that.name + " say hello to " + friend.name);
+    })
+  }
+
+}
+
+person.name;
+//Gilberto Gil
+
+person.name = "Caetano Veloso";
+
+person.state = "Bahia";
+
+//chamado de métodos
+person.toString();
+
+var personToString = person.toString;
+personToString();
+
+var personToString2 = person.toString.bind(person);
+personToString2(); // Caetano Veloso is from Salvador;
+
+
+> var obj = { 'not an identifier': 123 };
+> obj['not an identifier']
+123
+> obj['not an identifier'] = 456;
+
+> var obj = { hello: 'world' };
+> var x = 'hello';
+
+> obj[x]
+'world'
+> obj['hel'+'lo']
+'world'
+
+
+
+
+      </code>
+    </pre>
+
+  </li>
+  <li>
+<h5>Construtores</h5>
+
+<pre>
+  <code>
+function Person(name, city) {
+  this.name = name;
+  this.city = city;
+}
+
+Person.prototype.toString = function() {
+  return this.name + " is from " + this.city;
+};
+
+var person = new Person("Caetano Veloso", "Salvador");
+console.log(person.toString());
+
+person instanceof Person
+  </code>
+</pre>
+
+  </li>
+</ul>
+
+</li>
+
+                </ul>
+
+              </p>
+
+            </div>
+          </section>
+
+
+
+          </div>
+
+          <!-- Footer -->
+          <section id="footer">
+            <div class="container">
+              <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="/template/js/vendor/jquery.min.js"></script>
+        <script src="/template/js/vendor/jquery.scrollzer.min.js"></script>
+        <script src="/template/js/vendor/jquery.scrolly.min.js"></script>
+        <script src="/template/js/vendor/skel.min.js"></script>
+        <script src="/template/js/vendor/util.js"></script>
+        <!--[if lte IE 8]>
+        <script src="/template/js/vendor/ie/respond.min.js"></script><![endif]-->
+        <script src="/template/js/vendor/main.js"></script>
+
+      </body>
+      </html>
