@@ -154,6 +154,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                       <li>largura e altura do target viewport</li>
                     </ul>
                   </li>
+                  <li>
+                    <h4>Adaptativo vs Responsivo</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kx-jR_hz090" frameborder="0" allowfullscreen></iframe>
+                  </li>
                   <!-- <li>
                     <h4>Media Queries</h4>
                   </li> -->
@@ -187,9 +191,110 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                   <li>
                     <h4>Media Queries</h4>
                   </li>
+                  <li>
+                    <h4>Viewport</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XrMTuTzX4co" frameborder="0" allowfullscreen></iframe>
+                  </li>
                 </ul>
               </p>
 
+            </div>
+          </section>
+
+          <section id="five">
+
+
+            <div class="container">
+              <h3>Medias Responsivas</h3>
+
+              <p>
+                <ol>
+                  <li>Salve as imagens maiores</li>
+                  <li>Use max-width
+<pre>
+  <code>
+img {
+  max-width: 100%;
+}
+
+about img {
+  width: 29.6875%;
+}
+  </code>
+</pre>
+                  </li>
+                </ol>
+                <ul>
+
+
+<li><a href="http://clagnut.com/sandbox/imagetest3/">Use max-width</a></li>
+<li><a href="http://fittextjs.com">Font-Size</a></li>
+<li><a href="http://fitvidsjs.com">Responsive Videos</a></li>
+<li><a href="http://letteringjs.com">Tipografia</a></li>
+<li><a href="https://css-tricks.com/video-screencasts/133-figuring-responsive-images/">CSS Tricks</a></li>
+
+
+                  <li></li>
+                </ul>
+
+              </p>
+            </div>
+          </section>
+
+
+          <section id="six">
+
+
+            <div class="container">
+              <h3>Imagens de Retina</h3>
+
+              <p>
+                <ol>
+                  <li>Use duas vesões da imagem a original e outra com o dobro do tamanho</li>
+                  <li>
+<pre>
+  <code>
+/* normal - 12px por 16px */
+
+.button {
+  background-image: url(images/button.png) no-repeat;
+}
+
+/* retina */
+
+@media
+only screen and (-webkit-min-device-pixel-ration: 1.5),
+only screen and (min-device-pixel-ration: 1.5) {
+  .button {
+    background-image: url(images/button@2x.png); //imagem 24px por 32px
+    /* seta o background size para o tamanho da imagem original */
+    -webkit-background-size: 12px 16px;
+    background-size: 12px 16px;
+  }
+}
+
+
+  </code>
+</pre>
+                  </li>
+                </ol>
+                <p>
+                  <b>Opção</b> - usar <a href="http://scottjehl.com/picturefill">PictureFill - Scott Jehl</a>
+                </p>
+                <ul>
+
+
+<li><a href="http://clagnut.com/sandbox/imagetest3/">Use max-width</a></li>
+<li><a href="http://fittextjs.com">Font-Size</a></li>
+<li><a href="http://fitvidsjs.com">Responsive Videos</a></li>
+<li><a href="http://letteringjs.com">Tipografia</a></li>
+<li><a href="https://css-tricks.com/video-screencasts/133-figuring-responsive-images/">CSS Tricks</a></li>
+
+
+                  <li></li>
+                </ul>
+
+              </p>
             </div>
           </section>
 

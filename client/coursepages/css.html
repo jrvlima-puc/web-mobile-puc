@@ -73,6 +73,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN - CSS Reference</a></li>
                   <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started" target="_blank">MDN - CSS Tutorial</a></li>
                   <li><a href="http://www.w3.org/TR/css3-selectors/" target="_blank">W3C - Seletores</a></li>
+                  <li><a href="http://www.w3schools.com/css/">W3 Schools - CSS/CSS3 Tutorial</a></li>
                 </ul>
 
               </p>
@@ -263,7 +264,25 @@ div {
                     <ul>
                       <li>Manualmente
                       </li>
-                      <li>ou clearfix</li>
+                      <li>ou clearfix
+<pre>
+<code>
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1; /* IE6&7 */
+}
+</code>
+</pre>
+
+                      </li>
                     </ul>
                   </li>
 
