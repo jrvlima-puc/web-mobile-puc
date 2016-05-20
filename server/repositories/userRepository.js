@@ -9,10 +9,10 @@ var UserRepository = (function() {
     });
   };
 
-  function remove(user, callback) {
-    user.remove(function (err, user) {
+  function remove(id, callback) {
+    user.remove({id: id}, function (err) {
       if (err) return callback(err);
-      callback(null, user);
+      callback(null, null);
     });
   };
 
@@ -23,9 +23,17 @@ var UserRepository = (function() {
     });
   };
 
+  function findById(id, callback) {
+    User.findById(id, function(err, user) {
+      if(err) return callback(err);
+      callback(null, user);
+    })
+  }
+
   return {
     save: save,
     findAll: findAll,
+    findById: findById,
     remove: remove
   };
 
