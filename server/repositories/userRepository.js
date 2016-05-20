@@ -1,34 +1,60 @@
+var Promise = require('promise')
+
 var UserRepository = (function() {
 
   var User = require('../models/user.js');
 
-  function save(user, callback) {
-    user.save(function (err, user) {
-      if (err) return callback(err);
-      callback(null, user);
+  function save(user) {
+
+    return new Promise(function(fullfill, reject) {
+
+      user.save(function (err, user) {
+        if (err) return reject(err);
+        fullfill(user);
+      });
+
     });
+
   };
 
-  function remove(id, callback) {
-    user.remove({id: id}, function (err) {
-      if (err) return callback(err);
-      callback(null, null);
+  function remove(id) {
+
+    return new Promise(function(fullfill, reject){
+
+      User.remove({id: id}, function (err) {
+        if (err) return rejectd(err);
+        fullfill(null, null);
+      });
+
     });
+
   };
 
-  function findAll(query, callback) {
-    User.find(query, function(err, users) {
-      if(err) return callback(err);
-      callback(null, users);
+  function findAll(query) {
+
+    return new Promise(function(fulfill, reject){
+
+      User.find(query, function(err, users) {
+        if(err) return reject(err);
+        fulfill(users);
+      });
+
     });
+
   };
 
-  function findById(id, callback) {
-    User.findById(id, function(err, user) {
-      if(err) return callback(err);
-      callback(null, user);
-    })
-  }
+  function findById(id) {
+
+    return new Promise(function(fullfill, reject) {
+
+      User.findById(id, function(err, user) {
+        if(err) return reject(err);
+        fullfill(user);
+      });
+
+    });
+
+  };
 
   return {
     save: save,

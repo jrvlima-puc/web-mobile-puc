@@ -1,27 +1,95 @@
-var repository = require('../repositories/userRepository');
-
-exports.findAll = function(req, res, callback) {
-    repository.findAll({}, function(err, users) {
-        res.json(users);
-    });
-}
 
 
-exports.findById = function(req, res, callback) {
-    repository.findById(req.query.id, function(err, user) {
-        res.json(user);
-    });
-}
+
+var UserController = (function() {
+
+  var repository = require('../repositories/userRepository');
+
+  function findAll() {
+
+    return function (req, res) {
+      repository.UserRepository.findAll({})
+        .then(
+            function (data) {
+              return res.json(data);
+            }
+        )
+        .catch(
+            function (err) {
+              return res.json(err);
+            }
+        )
+      }
+
+    };
 
 
-exports.save = function(req, res, callback) {
-    repository.save(req.body, function(err, user) {
-        res.json(user);
-    });
-}
+    function findById() {
 
-exports.remove = function(req, res, callback) {
-    repository.remove(req.query.id, function(err, user) {
-        if(!user) res.json({"message": "User Removed"});
-    });
-}
+      return function(req, res) {
+        repository.UserRepository.findById(req.query.id)
+          .then(
+              function(data) {
+                return res.json(data);
+              }
+          )
+          .catch(
+              function(err) {
+                return res.json(err);
+              }
+          )
+      }
+
+    };
+
+
+    function save() {
+
+        return function(req, res) {
+          repository.UserRepository.save(req.body)
+            .then(
+                function(data) {
+                  return res.json(data);
+                }
+            )
+            .catch(
+                function(err) {
+                  return res.json(err);
+                }
+            )
+        }
+
+    };
+
+    function remove() {
+
+      return function(req, res) {
+        repository.UserRepository.remove(req.query.id)
+          .then(
+              function(data) {
+                return res.json(data);
+              }
+          )
+          .catch(
+              function(err) {
+                return res.json(err);
+              }
+          )
+      }
+
+    };
+
+
+
+  return {
+    findAll: findAll,
+    findById: findById,
+    save: save,
+    remove: remove
+  }
+
+
+})();
+
+
+module.exports = UserController;
