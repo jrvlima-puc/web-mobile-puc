@@ -143,3 +143,44 @@ As camadas no nosso projeto são para ilustrar o padrão camadas, não necessari
 * services - we use services stereotype to isolate the business layer on it
 * repositories - are responsible to data access, data object manipulation
 * models - represent our entities, or data structures and logic at model level
+
+##Using API
+
+To use API you can use a rest client tools as Postman(Chrome Web Store)
+
+###Create
+
+```
+POST -    http://localhost:8181/api/users
+PAYLOAD: eg: {"name":"Milton Nascimento", "email":"drmilton@gmail.com", "gender":"Male"}
+HEADERS: Content-Type: application/json
+```
+
+###Save
+
+```
+PUT -    http://localhost:8181/api/users
+PAYLOAD: eg: {"id":"0283052394020", "name":"Milton Nascimento", "email":"drmilton@gmail.com", "gender":"Male"}
+HEADERS: Content-Type: application/json
+```
+
+###Delete
+
+```
+DELETE -    http://localhost:8181/api/users/0283052394020
+HEADERS:    Content-Type: application/json
+```
+
+###FindOne
+
+```
+GET -       http://localhost:8181/api/users/0283052394020
+HEADERS:    Content-Type: application/json
+```
+
+###FindAll
+
+```
+GET -       http://localhost:8181/api/users
+HEADERS:    Content-Type: application/json
+```

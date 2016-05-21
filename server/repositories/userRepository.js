@@ -1,29 +1,60 @@
-var Promise = require('promise')
+var Promise = require('promise');
+var User = require('../models/user.js');
 
 var UserRepository = (function() {
 
-  var User = require('../models/user.js');
+  function bindBody(body, user) {
+    user.name = body.name;
+    user.email = body.email;
+    user.gender = body.gender;
+    console.dir(user);
+  };
 
-  function save(user) {
+  function save(body) {
 
     return new Promise(function(fullfill, reject) {
 
-      user.save(function (err, user) {
-        if (err) return reject(err);
-        fullfill(user);
-      });
+      if(body.id) {
+
+        User.findById(body.id, function(err, data) {
+
+          bindBody(body, data);
+
+          data.save(function (err, user) {
+            if (err) return reject(err);
+            fullfill(user);
+          });
+        });
+
+      }
 
     });
 
   };
 
+  function create(body) {
+
+    return new Promise(function(fullfill, reject) {
+
+      var user = new User();
+
+      bindBody(body, user);
+
+      user.save(function (err, user) {
+        if (err) return reject(err);
+        fullfill(user);
+      });
+    });
+
+  }
+
   function remove(id) {
 
     return new Promise(function(fullfill, reject){
 
-      User.remove({id: id}, function (err) {
-        if (err) return rejectd(err);
-        fullfill(null, null);
+      User.remove({_id: id}, function (err) {
+        if (err) return reject(err);
+        fullfill({"message": "Record Removed"});
       });
 
     });
@@ -60,7 +91,8 @@ var UserRepository = (function() {
     save: save,
     findAll: findAll,
     findById: findById,
-    remove: remove
+    remove: remove,
+    create: create
   };
 
 })();

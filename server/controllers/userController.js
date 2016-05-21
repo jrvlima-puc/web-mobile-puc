@@ -27,7 +27,7 @@ var UserController = (function() {
     function findById() {
 
       return function(req, res) {
-        repository.UserRepository.findById(req.query.id)
+        repository.UserRepository.findById(req.params.id)
           .then(
               function(data) {
                 return res.json(data);
@@ -46,9 +46,11 @@ var UserController = (function() {
     function save() {
 
         return function(req, res) {
+
           repository.UserRepository.save(req.body)
             .then(
                 function(data) {
+                  console.dir(data)
                   return res.json(data);
                 }
             )
@@ -61,10 +63,31 @@ var UserController = (function() {
 
     };
 
+  function create() {
+
+    return function(req, res) {
+
+      repository.UserRepository.create(req.body)
+          .then(
+              function(data) {
+                return res.json(data);
+              }
+          )
+          .catch(
+              function(err) {
+                return res.json(err);
+              }
+          )
+    }
+
+  };
+
     function remove() {
 
       return function(req, res) {
-        repository.UserRepository.remove(req.query.id)
+
+
+        repository.UserRepository.remove(req.params.id)
           .then(
               function(data) {
                 return res.json(data);
@@ -85,7 +108,8 @@ var UserController = (function() {
     findAll: findAll,
     findById: findById,
     save: save,
-    remove: remove
+    remove: remove,
+    create: create
   }
 
 
