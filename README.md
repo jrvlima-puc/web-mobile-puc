@@ -136,7 +136,7 @@ Abaixo estrutura do projeto comentada.
 
 The layers in our Node.js project are to ilustrate the layers patterns, not necessarily is needed to use all, our API is only using routes, models, and repositories. This because we don't have any business rules in server side.
 
-As camadas no nosso projeto são para ilustrar o padrão camadas, não necessariamente é necessário usar todas, nossa API está usando somente routes, models, e repositórios. Isso porque não temos nenhuma lógico no lado do servidor;
+As camadas no nosso projeto são para ilustrar o padrão camadas, não necessariamente é necessário usar todas, nossa API está usando somente routes, models, e repositórios. Isso porque não temos nenhuma lógica de negócios no lado do servidor;
 
 * routes - Rotes of express, only receive the HTTP Request and redirect to controllers
 * controllers - deal with any logic need to be done with HTTP Requests and HTTP Responses, besides this do any bind
