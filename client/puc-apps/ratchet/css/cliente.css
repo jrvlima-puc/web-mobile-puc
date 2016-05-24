@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+img{
+   width: 3.5%;
+   height: 3.5%;
+}
+.header {
+    border: 1px solid red;
+    padding: 15px;
+}
+.row div{
+  height: auto;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.botao{
+  width: 20px;
+  height: 20px;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 50%;}
+.col-4 {width: 33.33%;}
