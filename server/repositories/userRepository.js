@@ -65,7 +65,7 @@ var UserRepository = (function() {
 
     return new Promise(function(fulfill, reject){
 
-      User.find(query, function(err, users) {
+      User.find(query, {"name" : true, "email": true, "gender": true}, function(err, users) {
         if(err) return reject(err);
         fulfill(users);
       });

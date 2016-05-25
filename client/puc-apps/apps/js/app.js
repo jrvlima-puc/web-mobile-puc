@@ -6,12 +6,13 @@ $(function() {
     success: function( result ) {
       var source   = $("#list-users-template").html(),
           template = Handlebars.compile(source),
+          users,
           html;
 
-      html    = template(JSON.parse(result));
-      console.dir(result);
+      context = { users: result };
 
-
+      html    = template(context);
+      
       $("#content").append(html);
 
 
