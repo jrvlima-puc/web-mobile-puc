@@ -6,3 +6,4 @@ mongo-data/*
 *.iml
 .sass-cache
 nohup.out
+.log

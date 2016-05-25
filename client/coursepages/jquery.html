@@ -60,41 +60,53 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <div class="container">
               <header class="major">
 
-                <h2>Javascript</h2>
+                <h2>jQuery</h2>
                 <p>Introdução
-
+<a href="https://learn.jquery.com/">learn.jquery.com</a>
                 </p>
 
               </header>
 
               <p>
 
-                <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-                  JavaScript (JS) is a lightweight, interpreted, programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
-                  <hr>
-                  <cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN - Javascript</a></cite>
-                </blockquote>
+                <h3>DOM</h3>
+
+                <pre>
+                  <code>
+$( "button.continue" ).html( "Next Step..." )
+                  </code>
+                </pre>
 
 
-                <h3>Links de Referência</h3>
+                <h3>Tratando Eventos</h3>
 
-                <ul>
-                  <li><a href="http://jsforcats.com/" target="_blank">JavaScript For Cats</a></li>
-                  <li><a href="https://www.thinkful.com/learn/javascript-best-practices-1/" target="_blank">Javascript Best Practices 1</a></li>
-                  <li><a href="https://www.thinkful.com/learn/javascript-best-practices-2/" target="_blank">Javascript Best Pracitices 2</a></li>
-                  <li><a href="http://shop.oreilly.com/product/9780596517748.do" target="_blank">JavaScript: The Good Parts</a></li>
-                  <li><a href="http://addyosmani.com/resources/essentialjsdesignpatterns" target="_blank">Learning JavaScript Design Patterns</a></li>
-                  <li><a href="http://addyosmani.com/largescalejavascript/" target="_blank">Patterns For Large-Scale JavaScript Application Architecture</a></li>
-                  <li><a href="http://todomvc.com/" target="_blank">Todo MVC</a></li>
-                  <li><a href="http://slides.com/avenuecode/design-patterns-for-large-scale-javascript" target="_blank">Design Patterns for Large-Scale Javascript</a></li>
-                  <li><a href="http://shop.oreilly.com/product/9780596806767.do" target="_blank">JavaScript Patterns</a></li>
-                  <li><a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern" target="_blank">JavaScript Module Pattern</a></li>
-                  <li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
-                  <li><a href="http://tableless.com.br/javascript-entendendo-o-this/#.UhVmEGSbj_s" target="_blank">JavaScript: entendendo o this</a></li>
-                  <li><a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/" target="_blank">Understanding Scope and Context in JavaScript</a></li>
-                  <li><a href="http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html" target="_blank">JavaScript Scoping and Hoisting</a></li>
+                <pre>
+                  <code>
+var hiddenBox = $( "#banner-message" );
+$( "#button-container button" ).on( "click", function( event ) {
+  hiddenBox.show();
+});
 
-                </ul>
+                  </code>
+                </pre>
+
+
+                <h3>Ajax</h3>
+
+                <pre>
+                  <code>
+$.ajax({
+  url: "/api/getWeather",
+  data: {
+    zipcode: 97201
+  },
+  success: function( result ) {
+    $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+  }
+});
+
+                  </code>
+                </pre>
 
               </p>
 
@@ -107,626 +119,637 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <div class="container">
 
 
-              <h3>Overview</h3>
+              <h3>Carregando</h3>
 
               <p>
-                <ul class="list-html-elements">
-                  <li>
-
-                    <pre><code>
-/*
-  Comentário multilinha
-*/
-
-// comentário de única linha
-
-var name, firstName, lastName, x;  // declarando variáveis
-
-name = firstName + ' ' + lastName;  // atribuindo valores a variáveis
-
-foo(firstName, lastName);  // chamando a função foo
-obj.bar(name);  // chamando o método bar do objeto obj
-
-// A conditional statement
-if (name === 'Douglas Crockford') {  // Is `name` equal to 'Douglas Crockford'?
-    x = 'Papa do JS';
-}
-
-// Definindo a função `baz`
-function baz(a, b) {
-    return a + b;
-}
-
-/*ponto e vírgula é opicional
-  mas seu uso é recomendável
-*/
-
-
-//function expression terminam com um ponto e vírgula - em uma declaração 'var'
-var getName = function() {
-  return name;
-};
-                    </code></pre>
-                  </li>
-
-
-                  <li><h4>Principais Categorias</h4>
-                    <ul>
-                      <li>Statements(declarações)
-                        <p>
-                          do things
-                          <pre>
-                            <code>
-var balance
-
-//if-then-else com declaração
-var x;
-if (y >= 0) {
-    x = y;
-} else {
-    x = -y;
-}</code>
-                          </pre>
-                        </p>
-                      </li>
-                      <li>Expressions(expressões)
-                        <p>
-                          produce values
-                          <pre>
-                            <code>
-1000 * 1.3
-
-//como expressão
-var x = y >= 0 ? y : -y;
-
-//pode ser usado como argumento
-myFunction(y >= 0 ? y : -y)</code>
-                          </pre>
-                        </p>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>Valores</h4>
-                    <ul>
-                      <li><b>Valores primitivos: </b> booleans, numbers, strings, null, undefined</li>
-                      <li>Todos os outros são objetos</li>
-                      <li>A diferença principal entre primitivos e objetos em Javascript
-                        <ul>
-                          <li>cada objeto tem uma identidade única e é somente igual a ele mesmo</li>
-                          <li>valores primitivos que possuem o mesmo valor são considerados o mesmo</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>Valores Primitivos</h4>
-                    <ul>
-                      <li>Booleans: true, false</li>
-                      <li>Numbers</li>
-                      <li>String</li>
-                      <li>undefined, null</li>
-                      <li>
-
-                          <b>comparados por valor</b>
-
-                        <pre>
-                          <code>
-3 === 3 //true
-3 == '3' //true
-'PUC' === 'PUC' //true</code></pre></li>
-                      <li><b>sempre imutáveis</b></li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>Objetos</h4>
-                    <ul>
-                      <li>Plain objetcs
-<pre>
-<code>{
-    name: 'João Vinagre',
-    email: 'joao.lima@vilivesoft.com'
-}</code>
-</pre>
-                      </li>
-                      <li>Arrays</li>
-                      <li>Expressões Regulares</li>
-                      <li>Comparados por referência</li>
-                      <li>Mutáveis</li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>
-<pre style="display: inline;">
-undefined e NULL
-</pre></h4>
-                    <ul>
-                      <li><pre style="display: inline;">undefined</pre>   <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>   "no value"
-                        <pre>
-                          <code>
-var name;
-name //undefined
-
-function helloWorld(name) { return (name? "Hello " + name: "Hello World"); }
-
-helloWorld() //Hello World
-
-var person = {};
-person.name //undefined
-
-
-if(name === undefined || name === null) { ... }
-
-if(!name) { ... }
-
-</code>
-                        </pre>
-
-                      </li>
-                      <li><pre style="display: inline;">null</pre>   <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>   "no object"</li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>
-<pre style="display: inline;">typeof instanceof</pre>
-</h4>
-                    <pre>
-                      <code>
-typeof value
-value instanceof Constr
-
-
-typeof 'Galo'
-//'string'
-
-
-[] instanceof Array
-//true
-
-                      </code>
-                    </pre>
-                  </li>
-                  <li>
-                    <h4>Booleans</h4>
-                    <ul>
-                      <li>&&(And), ||(Or) <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> short-cirtuiting</li>
-                      <li>!(not)</li>
-                      <li>===, !==, ==, != - Igualdade</li>
-                      <li>>, >=, <, <=</li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>Truthy and Falsy</h4>
-                    <b>false</b>
-                    <ul>
-                      <li>undefined, null</li>
-                      <li>false</li>
-                      <li>-0, NaN</li>
-                      <li>''</li>
-                    </ul>
-                    <p>
-                      anything else is <b>true</b>
-                    </p>
-                  </li>
-
-                  <li>
-                    <h4>Numbers</h4>
-                    <p>
-                      Todos os números em JS são floating-point
-                    </p>
-                    <pre>
-<code>
-1 === 1.0 //true
-</code>
-                    </pre>
-                    <ul>
-                      <li>NaN("not a number")
-                        <pre>
-                          <code>
-Number('PUC') // NaN - conversão inválida
-                          </code>
-                        </pre>
-
-                      </li>
-                      <li>Infinity
-                        <pre>
-                          <code>
-3 / 0 //Infinity
-Math.pow(2, 1024) // too large - Infinity
-                          </code>
-                        </pre>
-                      </li>
-
-                      <li>
-                        <h4>Operadores</h4>
-
-                        <ul>
-                          <li>Adição: x + y</li>
-                          <li>Subtração: x - y</li>
-                          <li>Multiplicação: x * y</li>
-                          <li>Divisão: x / y</li>
-                          <li>Módulo: x % y</li>
-                          <li>Incremento: ++x, x++</li>
-                          <li>Decremento: --x, x--</li>
-                          <li>Negativo: -x</li>
-                          <li>Conversão para número: +valor</li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <h4>Strings</h4>
-                        <pre>
-                          <code>
-'Minas Gerais'
-"Minas Gerais"
-
-'Seu nome era "Valdemar"'
-"Seu nome era \"Valdemar\""
-
-var nome = 'Casa Grande'
-str[1] // canvas
-
-str.length // 11
-
-//Concatenando strings
-var name = "Belo " + "Horizonte";
-
-//Alguns Métodos
-"Minas".slice(1) //inas
-
-"Minas".slice(1 2) //
-
-"Minas   ".trim() //Minas - remove espaços em branco
-
-"Minas".indexOf("Gerais") === -1 //true
-
-                          </code>
-                        </pre>
-                      </li>
-
-                      <li>
-                        <h4>Condições</h4>
-                        <pre>
-<code>
-if(a === true) {
-
-}
-
-if(a === true) {
-
-} else {
-  false
-}
-
-if(a === true) {
-
-} else if(b === true) {
-
-} else if(c === true) {
-
-} else {
-
-}
-
-
-switch(cor) {
-  case 'branco':
-    //
-    break;
-  case 'preto':
-    //
-    break;
-  default:
-    //
-}
-
-</code>
-
-                        </pre>
-                      </li>
-
-                      <li>
-                        <h4>Loops</h4>
-
-
-                        <pre>
-<code>
-for(inicialização; condição; iteração)
-
-for(var i = 0, z = arr.length; i < z; i++) {
-  console.dir(arr[i]);
-}
-
-</code>
-                        </pre>
-
-                        <p>
-                          Javascript também possui loops <pre style="display: inline;">do while</pre> e <pre style="display: inline;">while</pre>, também como instruções de <pre style="display: inline;">break</pre> e
-                          <pre style="display: inline;">continue</pre>
-                        </p>
-
-                      </li>
-
-                    </ul>
-                  </li>
-
-                  <li>
-                    <h4>Funções</h4>
-
-                    <pre>
-                      <code>
-
-//declarando uma função
-function whithdraw(amount) {
-  if(balance - amount > 0) {
-    balance -= amount
-  }
-}
-
-//atribuindo a uma variável
-var deposit = function(amount) {
-  balance += amount;
-}
-
-//passando uma função como parâmetro
-$.get("/api/users", function(data) {
-  console.dir(data);
-});
-                      </code>
-                    </pre>
-
-                    <h5>Hoisting</h5>
-<p>
-  Em JS não importa aonde a variável foi declarada ela vai ser enviada para o topo do escopo
-</p>
-
-                    <pre>
-<code>
-(function() {
-  var name;
-
-  /*
-    getName já é uma variável local, declarada no escopo da função,
-    mas nem um valor, ou função foi atribuido a getName ainda
-
-  */
-  getName();
-
-  var getName = function() {
-    console.log(name);
-  }
-
-
-  /*
-    nesse momento getName já é uma função mas name é undefined
-
-  */
-  getName();
-
-  name = "Minas Gerais";
-
-  name = "São Paulo";
-
-})();
-</code>
-
-                    </pre>
-
-                    <h5>arguments</h5>
-
-                    <p>
-                      Em JS você pode chamar qualquer função com qualquer número de argumentos, JS vai mapear os argumentos com aqueles declarados na função e vai mapear todos os argumentos em um objeto "array like" chamado "arguments"
-                    </p>
-
-                    <pre>
-                      <code>
-var add = function(a, b) {
-  console.dir(arguments.toString());
-  console.log(a + b);
-}
-
-add(2, 5, 10, 12, 16);
-
-//2,5,10,12,16
-//7
-
-                      </code>
-                    </pre>
-
-                  <h5>Tratamento de Excessões</h5>
-
-                  <pre>
-                    <code>
-function getPerson(id) {
-    if (id < 0) {
-        throw new Error('ID must not be negative: '+id);
-    }
-    return { id: id }; // normally: retrieved from database
-}
-
-function getPersons(ids) {
-    var result = [];
-    ids.forEach(function (id) {
-        try {
-            var person = getPerson(id);
-            result.push(person);
-        } catch (exception) {
-            console.log(exception);
-        }
-    });
-    return result;
-}
-
-> getPersons([2, -5, 137])
-[Error: ID must not be negative: -5]
-[ { id: 2 }, { id: 137 } ]
-
-
-                    </code>
-                  </pre>
-
-                  <h5>Escopo</h5>
-
-                  <p>
-                    O espcopo de variáveis é sempre a função, não o bloco onde ela se encontra
-                  </p>
-
-                  <h5>Closures</h5>
-
-                  <p>
-                    Toda a função mantém uma referência as valores da função na qual ela se encontra, mesmo se a função interna sair do escopo da função externa.
-
-                  </p>
-
-<pre>
-  <code>
-
-
-function makeFun() {
-
-  var name = 'Mozilla';
-  function displayName() {
-    console.log(name);
-  }
-
-  return displayName;
-
-}
-
-var myFunc = makeFun();
-
-myFunc();
-
-
-//IIFE(immediately invoked function expression)
-var accountModule = (function() {
-  //private
-  var accounts = [];
-
-  return {
-    addAccount: function(account) {
-      accounts.push(account);
-    }
-  }
-
-})();
-
-
-  </code>
-</pre>
-
-<p>
-  Closure é uma função mais a conexão com todas as variáveis dos escopos que estão em torno
-</p>
-
-
-                  </li>
-<li><h4>Orientação a Objeto</h4>
-
-<ul>
-  <li><h5>Single Objects</h5>
-    <pre>
-      <code>
-var person = {
-
-  name: "Gilberto Gil",
-  city: "Salvador",
-
-  friends: [
-    {name: "Caetano Veloso", city: "Bahia"},
-    {name: "Milton Nascimento", city: "Belo Horizonte"},
-    {name: "Chico Buarque", city: "Rio de Janeiro"}
-  ],
-
-  toString: function() {
-    return this.name + " is from " + this.city;
-  }
-
-  printFriends: function() {
-    var that = this;
-    this.friends.forEach(function(friend) {
-      //this is undefined
-      console.log(that.name + " say hello to " + friend.name);
-    })
-  }
-
-}
-
-person.name;
-//Gilberto Gil
-
-person.name = "Caetano Veloso";
-
-person.state = "Bahia";
-
-//chamado de métodos
-person.toString();
-
-var personToString = person.toString;
-personToString();
-
-var personToString2 = person.toString.bind(person);
-personToString2(); // Caetano Veloso is from Salvador;
-
-
-> var obj = { 'not an identifier': 123 };
-> obj['not an identifier']
-123
-> obj['not an identifier'] = 456;
-
-> var obj = { hello: 'world' };
-> var x = 'hello';
-
-> obj[x]
-'world'
-> obj['hel'+'lo']
-'world'
-
-
-
-
-      </code>
-    </pre>
-
-  </li>
-  <li>
-<h5>Construtores</h5>
-
-<pre>
-  <code>
-function Person(name, city) {
-  this.name = name;
-  this.city = city;
-}
-
-Person.prototype.toString = function() {
-  return this.name + " is from " + this.city;
-};
-
-var person = new Person("Caetano Veloso", "Salvador");
-console.log(person.toString());
-
-person instanceof Person
-  </code>
-</pre>
-
-  </li>
-</ul>
-
-</li>
-
-                </ul>
-
+              <pre>
+                <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="http://jquery.com/"&gt;jQuery&lt;/a&gt;
+    &lt;script src="jquery.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+
+    // Your code goes here.
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+              </pre>
               </p>
+
+              <p>
+              <pre>
+                <code>
+$( document ).ready(function() {
+  $( "a" ).click(function( event ) {
+    console.log("Você clicou em um link");
+
+    //check, add, remove class
+    if($("a").hasClass("test")) {
+      $( "a" ).removeClass( "test" );
+    } else {
+      $( "a" ).addClass( "test" );
+    }
+
+    //hidding with an effect
+    $( this ).hide( "slow" );
+    event.preventDefault();
+  });
+
+});
+                </code>
+              </pre>
+              </p>
+
+              <p>
+                <h3>$ vs $()</h3>
+                <pre>
+                  <code>
+//$() jQuery Selections $.fn(jQuery Prototype)
+$("h1").remove()
+$("h1").each()
+
+//$ namespace - generally utility-type methods
+$.each(array, function(element) {
+  console.log(element);
+});
+                  </code>
+                </pre>
+              </p>
+
+
+              <p>
+                <h3>$(document).ready()</h3>
+                <pre>
+                  <code>
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
+// Shorthand for $( document ).ready()
+$(function() {
+    console.log( "ready!" );
+});
+                  </code>
+                </pre>
+              </p>
+
+              <p>
+                <h3>no conflict</h3>
+                <pre>
+                  <code>
+var $j = jQuery.noConflict();
+// $j is now an alias to the jQuery function; creating the new alias is optional.
+
+$j(document).ready(function() {
+    $j( "div" ).hide();
+});
+
+jQuery.noConflict();
+
+jQuery( document ).ready(function( $ ) {
+    // You can use the locally-scoped $ in here as an alias to jQuery.
+    $( "div" ).hide();
+});
+
+jQuery.noConflict();
+
+(function( $ ) {
+    // Your jQuery code here, using the $
+})( jQuery );
+
+jQuery(document).ready(function( $ ) {
+    // Your jQuery code here, using $ to refer to jQuery.
+});
+
+jQuery(function($){
+    // Your jQuery code here, using the $
+});
+                  </code>
+                </pre>
+              </p>
+
+              <p>
+                <h3>Atributos</h3>
+                <pre>
+                  <code>
+
+//setter
+
+$( "a" ).attr( "href", "allMyHrefsAreTheSameNow.html" );
+
+$( "a" ).attr({
+    title: "all titles are the same too!",
+    href: "somethingNew.html"
+});
+
+//getter
+$( "a" ).attr( "href" );
+                  </code>
+                </pre>
+              </p>
+
+              <p>
+                <h3>Selecionando Elementos</h3>
+                <pre>
+                  <code>
+
+//Selecting Elements by ID
+$( "#myId" );
+
+//Selecting Elements by Class Name
+$( ".myClass" );
+
+//Selecting Elements by Attribute
+$( "input[name='first_name']" );
+
+//Selecting Elements by Compound CSS Selector
+$( "#contents ul.people li" );
+
+//Selecting Elements with a Comma-separated List of Selectors
+$( "div.myClass, ul.people" );
+
+//Pseudo-Selectors
+$( "a.external:first" );
+$( "tr:odd" );
+
+// Select all input-like elements in a form (more on this below).
+$( "#myForm :input" );
+$( "div:visible" );
+
+// All except the first three divs.
+$( "div:gt(2)" );
+
+// All currently animated divs.
+$( "div:animated" );
+
+// Refining selections.
+$( "div.foo" ).has( "p" );         // div.foo elements that contain &lt;p&gt; tags
+$( "h1" ).not( ".bar" );           // h1 elements that don't have a class of bar
+$( "ul li" ).filter( ".current" ); // unordered list items with class of current
+$( "ul li" ).first();              // just the first unordered list item
+$( "ul li" ).eq( 5 );              // the sixth
+                  </code>
+                </pre>
+              </p>
+
+              <p>
+                <h3>Trabalhando com Seleções</h3>
+                <pre>
+                  <code>
+
+// The .html() method sets all the h1 elements' html to be "hello world":
+$( "h1" ).html( "hello world" );
+
+
+// The .html() method returns the html of the first h1 element:
+$( "h1" ).html();
+// > "hello world"
+
+
+$( "#content" ).find( "h3" ).eq( 2 ).html( "new text for the third h3!" );
+
+
+$( "#content" )
+    .find( "h3" )
+    .eq( 2 )
+    .html( "new text for the third h3!" );
+
+
+
+                  </code>
+                </pre>
+              </p>
+<p>
+  <h3>Manipulando Elementos</h3>
+
+  <ul>
+    <li>.html() - getter/setter de conteúdo HTML</li>
+    <li>.text() - getter/setter de conteúdo de texto</li>
+    <li>.attr() - getter/setter de valores de atributo</li>
+    <li>.width() - getter/setter width</li>
+    <li>.height() - getter/setter height</li>
+    <li>.val() - getter/setter - elementos de formulário</li>
+    <li>.position() - getter top/left</li>
+  </ul>
+</p>
+
+<p>
+  <h3>Movendo, Copiando e Removendo Elementos</h3>
+
+  <ul>
+    <li>.insertAfter()</li>
+    <li>.after()</li>
+    <li>.insertBefore()</li>
+    <li>.before()</li>
+    <li>.appendTo()</li>
+    <li>.append()</li>
+    <li>.prependTo()</li>
+    <li>.prepend()</li>
+  </ul>
+
+  <pre>
+
+    <code>
+// Moving elements using different approaches.
+
+// Make the first list item the last list item:
+var li = $( "#myList li:first" ).appendTo( "#myList" );
+
+// Another approach to the same problem:
+$( "#myList" ).append( $( "#myList li:first" ) );
+
+// Note that there's no way to access the list item
+// that we moved, as this returns the list itself.
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Cloning Elementos</h3>
+
+
+  <pre>
+    <code>
+// Making a copy of an element.
+
+// Copy the first list item to the end of the list:
+$( "#myList li:first" ).clone().appendTo( "#myList" );
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Criando Elementos</h3>
+
+
+  <pre>
+    <code>
+// Creating new elements from an HTML string.
+$( "&lt;p&gt;This is a new paragraph&lt;/p>" );
+$( "&lt;li class='new'>new list item&lt;/li&gt;" );
+
+// Creating a new element with an attribute object.
+$( "&lt;a/&gt;", {
+    html: "This is a &lt;strong>new&lt;/strong&gt; link",
+    "class": "new",
+    href: "foo.html"
+});
+
+// Getting a new element on to the page.
+
+var myNewElement = $( "<p>New element</p>" );
+
+myNewElement.appendTo( "#content" );
+
+myNewElement.insertAfter( "ul:last" ); // This will remove the p from #content!
+
+$( "ul" ).last().after( myNewElement.clone() ); // Clone the p so now we have two.
+
+// Creating and adding an element to the page at the same time.
+$( "ul" ).append( "<li>list item</li>" );
+
+
+var myItems = [];
+var myList = $( "#myList" );
+
+for ( var i = 0; i < 100; i++ ) {
+    myItems.push( "<li>item " + i + "</li>" );
+}
+
+myList.append( myItems.join( "" ) );
+
+// Manipulating a single attribute.
+$( "#myDiv a:first" ).attr( "href", "newDestination.html" );
+
+// Manipulating multiple attributes.
+$( "#myDiv a:first" ).attr({
+    href: "newDestination.html",
+    rel: "nofollow"
+});
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Traversing</h3>
+
+
+  <pre>
+    <code>
+&lt;div class="grandparent"&gt;
+    &lt;div class="parent"&gt;
+        &lt;div class="child"&gt;
+            &lt;span class="subchild"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="surrogateParent1"&gt;&lt;/div&gt;
+    &lt;div class="surrogateParent2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+// Selecting an element's direct parent:
+
+// returns [ div.child ]
+$( "span.subchild" ).parent();
+
+// Selecting all the parents of an element that match a given selector:
+
+// returns [ div.parent ]
+$( "span.subchild" ).parents( "div.parent" );
+
+// returns [ div.child, div.parent, div.grandparent ]
+$( "span.subchild" ).parents();
+
+// Selecting all the parents of an element up to, but *not including* the selector:
+
+// returns [ div.child, div.parent ]
+$( "span.subchild" ).parentsUntil( "div.grandparent" );
+
+// Selecting the closest parent, note that only one parent will be selected
+// and that the initial element itself is included in the search:
+
+// returns [ div.child ]
+$( "span.subchild" ).closest( "div" );
+
+// returns [ div.child ] as the selector is also included in the search:
+$( "div.child" ).closest( "div" );
+
+
+// Selecting an element's direct children:
+
+// returns [ div.parent, div.surrogateParent1, div.surrogateParent2 ]
+$( "div.grandparent" ).children( "div" );
+
+// Finding all elements within a selection that match the selector:
+
+// returns [ div.child, div.parent, div.surrogateParent1, div.surrogateParent2 ]
+$( "div.grandparent" ).find( "div" );
+
+
+
+// Selecting a next sibling of the selectors:
+
+// returns [ div.surrogateParent1 ]
+$( "div.parent" ).next();
+
+// Selecting a prev sibling of the selectors:
+
+// returns [] as No sibling exists before div.parent
+$( "div.parent" ).prev();
+
+// Selecting all the next siblings of the selector:
+
+// returns [ div.surrogateParent1, div.surrogateParent2 ]
+$( "div.parent" ).nextAll();
+
+// returns [ div.surrogateParent1 ]
+$( "div.parent" ).nextAll().first();
+
+// returns [ div.surrogateParent2 ]
+$( "div.parent" ).nextAll().last();
+
+// Selecting all the previous siblings of the selector:
+
+// returns [ div.surrogateParent1, div.parent ]
+$( "div.surrogateParent2" ).prevAll();
+
+// returns [ div.surrogateParent1 ]
+$( "div.surrogateParent2" ).prevAll().first();
+
+// returns [ div.parent ]
+$( "div.surrogateParent2" ).prevAll().last();
+
+
+// Selecting an element's siblings in both directions that matches the given selector:
+
+// returns [ div.surrogateParent1, div.surrogateParent2 ]
+$( "div.parent" ).siblings();
+
+// returns [ div.parent, div.surrogateParent2 ]
+$( "div.surrogateParent1" ).siblings();
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>CSS</h3>
+
+
+  <pre>
+    <code>
+// Getting CSS properties.
+
+$( "h1" ).css( "fontSize" ); // Returns a string such as "19px".
+
+$( "h1" ).css( "font-size" ); // Also works.
+
+// Setting CSS properties.
+
+$( "h1" ).css( "fontSize", "100px" ); // Setting an individual property.
+
+// Setting multiple properties.
+$( "h1" ).css({
+    fontSize: "100px",
+    color: "red"
+});
+
+
+// Working with classes.
+
+var h1 = $( "h1" );
+
+h1.addClass( "big" );
+h1.removeClass( "big" );
+h1.toggleClass( "big" );
+
+if ( h1.hasClass( "big" ) ) {
+    ...
+}
+
+
+
+// Basic dimensions methods.
+
+// Sets the width of all <h1> elements.
+$( "h1" ).width( "50px" );
+
+// Gets the width of the first <h1> element.
+$( "h1" ).width();
+
+// Sets the height of all <h1> elements.
+$( "h1" ).height( "50px" );
+
+// Gets the height of the first <h1> element.
+$( "h1" ).height();
+
+
+// Returns an object containing position information for
+// the first <h1> relative to its "offset (positioned) parent".
+$( "h1" ).position();
+
+
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Data</h3>
+
+
+  <pre>
+    <code>
+// Storing and retrieving data related to an element.
+
+$( "#myDiv" ).data( "keyName", { foo: "bar" } );
+
+$( "#myDiv" ).data( "keyName" ); // Returns { foo: "bar" }
+
+
+
+// Storing a relationship between elements using .data()
+
+$( "#myList li" ).each(function() {
+
+    var li = $( this );
+    var div = li.find( "div.content" );
+
+    li.data( "contentDiv", div );
+
+});
+
+// Later, we don't have to find the div again;
+// we can just read it from the list item's data
+var firstLi = $( "#myList li:first" );
+
+firstLi.data( "contentDiv" ).html( "new content" );
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Metódos Utilitários</h3>
+
+
+  <pre>
+    <code>
+// Returns "lots of extra whitespace"
+$.trim( "    lots of extra whitespace    " );
+
+
+
+$.each([ "foo", "bar", "baz" ], function( idx, val ) {
+    console.log( "element " + idx + " is " + val );
+});
+
+$.each({ foo: "bar", baz: "bim" }, function( k, v ) {
+    console.log( k + " : " + v );
+});
+
+
+var myArray = [ 1, 2, 3, 5 ];
+
+if ( $.inArray( 4, myArray ) !== -1 ) {
+    console.log( "found it!" );
+}
+
+
+var firstObject = { foo: "bar", a: "b" };
+var secondObject = { foo: "baz" };
+
+var newObject = $.extend( firstObject, secondObject );
+
+console.log( firstObject.foo ); // "baz"
+console.log( newObject.foo ); // "baz"
+
+
+var firstObject = { foo: "bar", a: "b" };
+var secondObject = { foo: "baz" };
+
+var newObject = $.extend( {}, firstObject, secondObject );
+
+console.log( firstObject.foo ); // "bar"
+console.log( newObject.foo ); // "baz"
+
+
+    </code>
+  </pre>
+</p>
+
+
+<p>
+  <h3>Iterando</h3>
+
+
+  <pre>
+    <code>
+var sum = 0;
+
+var arr = [ 1, 2, 3, 4, 5 ];
+
+
+
+for ( var i = 0, l = arr.length; i < l; i++ ) {
+    sum += arr[ i ];
+}
+
+console.log( sum ); // 15
+
+
+
+$.each( arr, function( index, value ){
+    sum += value;
+});
+
+console.log( sum ); // 15
+
+
+var sum = 0;
+var obj = {
+    foo: 1,
+    bar: 2
+}
+
+
+for (var item in obj) {
+    sum += obj[ item ];
+}
+
+console.log( sum ); // 3
+
+
+$.each( obj, function( key, value ) {
+    sum += value;
+});
+
+console.log( sum ); // 3
+
+
+
+
+
+    </code>
+  </pre>
+</p>
+
 
             </div>
           </section>
+
+
 
 
 

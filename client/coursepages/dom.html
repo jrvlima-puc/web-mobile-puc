@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+Read Only by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Web Mobile - PUC MG - João Vinagre</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!--[if lte IE 8]>
+  <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/template/css/main.css"/>
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+  <style media="screen">
+    .puc-col-6 {
+      width: 50%;
+      float: left;
+    }
+
+    .group:before, .group:after {
+      content: "";
+      display: table;
+    }
+
+    .group:after {
+      clear: both;
+    }
+
+    .group {
+      zoom: 1; /* IE6&7 */
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <section id="header">
+
+    <header>
+      <h1 id="logo"><a href="/index.html">Web Mobile</a></h1>
+      <p></p>
+      <span class="image avatar" style="border-radius:100%; margin-top: 5em; width: 6em;"><img src="/template/images/photo_joao.png" alt="" /></span>
+      <h1 style="font-size:1.2em;"><a href="#">João Vinagre</a></h1>
+      <p>
+        Consultor
+      </p>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#one" class="active">Introdução</a></li>
+        <li><a href="#two">Árvore</a></li>
+        <li><a href="#three">Andando na Árvore</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <ul class="icons">
+        <li><a href="https://br.linkedin.com/in/jrvlima" class="icon fa-linkedin"><span
+          class="label">Linkedin</span></a></li>
+          <li><a href="http://codepen.io/jrvlima/" class="icon fa-codepen"><span class="label">CodePen</span></a></li>
+          <li><a href="https://github.com/jrvlima" class="icon fa-github"><span class="label">Github</span></a></li>
+          <li><a href="mailto:joao.lima@vilivesoft.com?Subject=Web%20Mobile%202016" class="icon fa-envelope"><span
+            class="label">Email</span></a></li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+          <!-- One -->
+          <section id="one" class="group">
+            <div class="container">
+              <header class="major">
+                <h2>DOM</h2>
+                <p>Introdução</p>
+              </header>
+              <p>
+                DOM(Document Object Model) é um objeto Javascript usado para representar e interagir com o HTML
+              </p>
+
+<p>
+  Página baseada em:
+  <cite>Safari Books Online - Introduction to Javascript Tutorial</cite>
+</p>
+                <p>
+                  <pre>
+                    <code>
+  &lt;!doctype html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;My  home page&lt;/title&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;My home  page&lt;/h1&gt;
+      &lt;p&gt;Hello, I am Marijn and this is my home page.&lt;/p&gt;
+      &lt;p&gt;I also wrote a book! Read it
+        &lt;a href="http://eloquentjavascript.net"&gt;here&lt;/a&gt;.&lt;/p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+                    </code>
+                  </pre>
+<div class="puc-col-6">
+                  <figure>
+  <img src="images/dom_1.png" alt="" />
+  <figcaption>Representação do código acima</figcaption>
+                  </figure>
+
+                </p>
+              </div>
+              <div class="puc-col-6" style="padding: 2em;">
+                  <p>
+                    <ul>
+                      <li>Cada Caixa ao lado representa um objecto que pode ser manipulado via JS</li>
+                      <li>A variável global <pre style="display: inline;">document</pre> dá acesso a todos os objetos</li>
+                    </ul>
+                  </p>
+              </div>
+
+            </div>
+
+
+          </section>
+
+          <!-- Two -->
+          <section id="two" class="group">
+            <div class="container">
+              <h3>Árvore</h3>
+
+              <div class="puc-col-6">
+                                <figure>
+                <img src="images/dom_2.jpg" alt="" />
+                <figcaption>Representação em Árvore do código acima</figcaption>
+                                </figure>
+
+                              </p>
+                            </div>
+                            <div class="puc-col-6" style="padding: 2em;">
+                                <p>
+                                  <ul>
+                                    <li>Folhas são representadas pelos nodes de texto</li>
+                                    <li>Setas represetam relações entre pais e filhos entre nodes</li>
+                                  </ul>
+                                </p>
+                            </div>
+
+                          </div>
+
+          </section>
+
+          <!-- Two -->
+          <section id="three" class="group">
+            <div class="container">
+              <h3>Andando na Árvore</h3>
+
+              <div class="puc-col-6">
+                                <figure>
+                <img src="images/dom_3.jpg" alt="" />
+                <figcaption>Representação em Árvore do código acima</figcaption>
+                                </figure>
+
+                              </p>
+                            </div>
+                            <div class="puc-col-6" style="padding: 2em;">
+                                <p>
+                                  <ul>
+                                    <li>Os nodes do DOM contém uma séria de links para outros nodes</li>
+                                  </ul>
+                                </p>
+                            </div>
+
+                          </div>
+
+
+          </section>
+
+        </div>
+      </div>
+    </body>
+    </html>

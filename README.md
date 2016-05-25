@@ -30,7 +30,7 @@ Primeiro passo é clonar o repostiório
 ```
 git clone https://github.com/jrvlima-puc/web-mobile-2016.git
 ```
-After conplete, go inside the project you've just cloned
+After complete, go inside the project you've just cloned
 
 Depois de ter completado entre no diretório que acabou de clonar
 
