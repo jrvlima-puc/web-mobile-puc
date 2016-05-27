@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 
-
 var config = {
   database: {
     connectionString: "mongodb://localhost:27017/web-mobile",
@@ -13,6 +12,5 @@ var config = {
     }
   }
 };
-
 
 mongoose.connect(config.database.connectionString);

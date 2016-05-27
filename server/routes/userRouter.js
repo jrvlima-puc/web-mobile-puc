@@ -3,7 +3,6 @@ var router = express.Router();
 
 var controller = require('../controllers/userController');
 
-/* GET users listing. */
 router.route('/')
     .get(controller.findAll());
 
@@ -18,6 +17,5 @@ router.route('/')
 
 router.route('/:id')
     .delete(controller.remove());
-
 
 module.exports = router;

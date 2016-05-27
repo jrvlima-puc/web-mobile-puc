@@ -13,9 +13,7 @@
     "client/components"
   ],
   "scripts": {
-    "start": "node server/bin/www",
-    "test": "karma",
-    "postinstall": "bower install && grunt build"
+    "start": "node server/bin/www"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
