@@ -44,6 +44,7 @@
     "jshint-stylish": "latest",
     "load-grunt-config": "latest",
     "load-grunt-tasks": "latest",
+    "mongoose": "^4.4.19",
     "morgan": "~1.6.1",
     "nodemon": "^1.9.2",
     "promise": "^7.1.1",
