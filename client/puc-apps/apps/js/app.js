@@ -1,24 +1,26 @@
 $(function() {
 
-  $.ajax({
+    $.ajax({
 
-    url: "/api/users",
+        url: "/api/users",
 
-    success: function( result ) {
+        success: function(result) {
 
-      var source   = $("#list-users-template").html(),
-          template = Handlebars.compile(source),
-          users,
-          html;
+            var source = $("#list-users-template").html(),
+                template = Handlebars.compile(source),
+                users,
+                html;
 
-      context = { users: result };
+            context = {
+                users: result
+            };
 
-      html    = template(context);
+            html = template(context);
 
-      $("#content").append(html);
+            $("#content").append(html);
 
 
-    }
-  });
+        }
+    });
 
 });

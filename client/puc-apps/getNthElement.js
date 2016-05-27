@@ -6,5 +6,5 @@ function getNthElement(list, index) {
         index += list.length;
     }
     return list[index];
-    
+
 }
