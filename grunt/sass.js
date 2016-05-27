@@ -1,7 +1,8 @@
 module.exports = {
     development: {
         options: {
-            style: "expanded"
+            style: "expanded",
+            noCache: true
         },
         files: {
             // "client/template/css/main.css": "client/template/sass/main.scss",
