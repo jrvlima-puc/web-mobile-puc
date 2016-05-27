@@ -13,7 +13,9 @@
     "client/components"
   ],
   "scripts": {
-    "start": "node server/bin/www"
+    "start": "node server/bin/www",
+    "test": "karma",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

@@ -8,5 +8,6 @@ module.exports = function(grunt) {
 
     grunt.task.loadTasks("grunt/tasks");
 
+    grunt.registerTask('heroku:production', ["sass", "jshint", "newer:jsbeautifier", "copy"]);
 
 };
