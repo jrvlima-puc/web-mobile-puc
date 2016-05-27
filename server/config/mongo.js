@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var config = {
   database: {
-    connectionString: "mongodb://heroku_h4ph4p1q:heroku_h4ph4p1q@ds017173.mlab.com:17173/heroku_h4ph4p1q",
+    connectionString: "mongodb://heroku_n6fv3s42:8sukkb1cu2p7g001l4vbmkv80u@ds017553.mlab.com:17553/heroku_n6fv3s42",
     databaseName: "web-mobile"
   },
   debug: {
