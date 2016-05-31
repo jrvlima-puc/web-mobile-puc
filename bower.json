@@ -22,5 +22,8 @@
   },
   "resolutions": {
     "backbone": "1.3.3"
+  },
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6"
   }
 }

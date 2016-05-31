@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Usuários</title>
+  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js" type="text/javascript"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <header>
+    <div class="navbar-fixed white">
+      <nav>
+        <div class="nav-wrapper">
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="content" class="container"></div>
+  </main>
+
+  <footer class="page-footer indigo darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12"></div>
+        <div class="col l3 s12"></div>
+        <div class="col l3 s12"></div>
+      </div>
+    </div>
+    <div class="footer-copyright"></div>
+  </footer>
+
+
+  <div class="templates">
+
+    <script id="list-users-template" type="text/x-handlebars-template">
+
+      <h3>Lista de Usuários</h3>
+
+      <div class="row hidden-xs row hidden-xs table-header desktop-row-header">
+        <div class="col l12" >
+          <div class="row">
+            <div class="hidden-xs col s3">Nome</div>
+            <div class="hidden-xs col s3">Email</div>
+            <div class="hidden-xs col s3">Sexo</div>
+            <div class="hidden-xs col s3">Ações</div>
+          </div>
+        </div>
+      </div>
+
+      {{#each users}}
+      <div class="row desktop-row">
+        <div class="col s3 visible-xs">
+          <div class="row list-header">
+            <div class="col s12 visible-xs">Nome</div>
+            <div class="col s12 visible-xs">Email</div>
+            <div class="col s12 visible-xs">Sexo</div>
+            <div class="col s12 visible-xs"></div>
+          </div>
+        </div>
+
+        <div class="col l12 col s9" >
+          <div class="row">
+            <div class="col s12 col l3 user-info">{{name}}</div>
+            <div class="col s12 col l3 user-info">{{email}}</div>
+            <div class="col s12 col l3 user-info">{{gender}}</div>
+            <div class="l1"></div>
+            <div class="col s12 col l2 list-actions">
+              <i class="material-icons">mode_edit</i>
+              <i class="material-icons">delete</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+    </script>
+
+  </div>
+
+  <script src="js/app.js" type="text/javascript" ></script>
+</body>
+</html>
